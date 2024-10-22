@@ -101,11 +101,12 @@
     padding:0 0.2rem 0 1rem;
     width: 100%;
     height: 3.5rem;
-    background: #fff;
+    background: #df8888;
     box-shadow:0 2px 8px rgba(0, 0, 0, 0.15);
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
     .logo-box {
       display:flex;
       align-items: center;

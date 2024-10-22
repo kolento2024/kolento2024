@@ -92,7 +92,7 @@
 
 <style scoped lang="scss">
   .filter {
-    box-shadow:0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius:0.5rem;
     overflow: hidden;
   }
@@ -102,16 +102,22 @@
     flex-wrap: wrap;
     .tag-list {
       cursor: pointer;
-      color:#333;
+      color:#df8888;
       border-radius:0.3rem;
       margin:0.2rem 0.5rem 0.2rem 0;
       padding:0.1rem 0.4rem 0.05rem;
-      border:1px solid #d9d9d9;
+      border:1px solid #df8888;
+      transition:all ease 0.2s;
+    }
+    .tag-list:hover {
+      background: #df8888;
+      color:#fff;
+      border-color:#df8888;
     }
     .list-on {
-      background: #1677ff;
+      background: #df8888;
       color:#fff;
-      border-color:#1677ff;
+      border-color:#df8888;
     }
   }
 </style>
