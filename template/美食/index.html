@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美食介绍</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background-image: url('./images/1.jpg'); /* 替换为你的图片链接 */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .second-title {
+      margin-left: 20px;
+      font-size: 1.6rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .dish {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .dish:hover {
+      transform: translateY(-10px);
+    }
+    .dish img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .dish-content {
+      padding: 15px;
+    }
+    .dish-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .dish-description {
+      text-align: justify;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>美食天堂</h1>
+    <p class="second-title">探索世界各地的美食</p>
+  </header>
+  <div class="container">
+    <div class="menu">
+      <div class="dish">
+        <img src="./images/2.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">北京烤鸭</h3>
+          <p class="dish-description">
+            北京烤鸭是中国著名的传统名菜之一，以其皮脆肉嫩、味道鲜美著称。制作工艺独特，色泽鲜艳，香气扑鼻，深受国内外食客的喜爱。
+          </p>
+        </div>
+      </div>
+      <div class="dish">
+        <img src="./images/3.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">四川火锅</h3>
+          <p class="dish-description">
+            四川火锅以其麻辣鲜香的特点闻名遐迩。锅底采用多种香料和辣椒熬制而成，食材多样，吃法独特，让人回味无穷。
+          </p>
+        </div>
+      </div>
+      <div class="dish">
+        <img src="./images/4.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">广东烧鹅</h3>
+          <p class="dish-description">
+            广东烧鹅是一道历史悠久的传统名菜，以其肉质鲜嫩、皮脆色亮而闻名。制作工艺讲究，调味独特，深受广大食客的喜爱。
+          </p>
+        </div>
+      </div>
+      <div class="dish">
+        <img src="./images/5.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">上海小笼包</h3>
+          <p class="dish-description">
+            上海小笼包是江南地区的一道特色小吃，以其皮薄馅嫩、汤汁丰富而著称。每一口都能品尝到鲜美的汤汁和细腻的肉馅。
+          </p>
+        </div>
+      </div>
+      <div class="dish">
+        <img src="./images/6.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">云南过桥米线</h3>
+          <p class="dish-description">
+            云南过桥米线是一道具有悠久历史的地方特色美食，以其鲜美的高汤、滑嫩的米线和丰富的配料而闻名。吃法独特，营养丰富。
+          </p>
+        </div>
+      </div>
+      <div class="dish">
+        <img src="./images/7.jpg" alt="美食图片"> <!-- 替换为你的图片链接 -->
+        <div class="dish-content">
+          <h3 class="dish-title">鹅肝</h3>
+          <p class="dish-description">
+            鹅肝为鸭科动物鹅的肝脏。因其丰富的营养和特殊功效，使得鹅肝成为补血养生的理想食品。鹅肝的出名还因为法国著名的料理鹅肝。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
