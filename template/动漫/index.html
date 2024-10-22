@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动漫世界</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin-right: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .hero-section {
+      background-image: url('./1.jpg'); /* 替换为你的图片链接 */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero-section h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .anime-list {
+      margin-top: 40px;
+    }
+    .anime-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .anime-item img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .anime-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .anime-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #666;
+    }
+    .anime-meta span {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .anime-description {
+      text-align: justify;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .anime-source {
+      font-size: 1.1em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .comments {
+      margin-top: 10px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+    .comment {
+      margin-bottom: 10px;
+    }
+    .comment-author {
+      font-weight: bold;
+      color: #333;
+    }
+    .comment-text {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>动漫世界</h1>
+    <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">新番推荐</a></li>
+        <li><a href="#">经典回顾</a></li>
+        <li><a href="#">热门排行</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="hero-section">
+      <h1>欢迎来到动漫世界</h1>
+      <p>探索最新最热的动漫作品</p>
+    </div>
+    <div class="anime-list">
+      <div class="anime-item">
+        <img src="./2.jpg" alt="动漫图片"> <!-- 替换为你的图片链接 -->
+        <h3 class="anime-title">《鬼灭之刃》</h3>
+        <div class="anime-meta">
+          <span>类型: 动作, 冒险</span>
+          <span>集数: 26</span>
+          <span>年份: 2019</span>
+          <span>豆瓣评分: 8.8</span>
+        </div>
+        <p class="anime-description">
+          《鬼灭之刃》是一部日本漫画作品，讲述了一个少年炭治郎在家人被鬼杀死后，踏上成为鬼猎人之路的故事。作品以其精美的画风和扣人心弦的情节受到广泛好评。
+        </p>
+        <p class="anime-source">播放来源: B站, 腾讯视频</p>
+        <div class="comments">
+          <div class="comment">
+            <span class="comment-author">用户A:</span>
+            <span class="comment-text">这部作品真的很好看，人物设定也很棒。</span>
+          </div>
+          <div class="comment">
+            <span class="comment-author">用户B:</span>
+            <span class="comment-text">剧情紧凑，打斗场景很精彩，强烈推荐。</span>
+          </div>
+        </div>
+      </div>
+      <div class="anime-item">
+        <img src="./3.jpg" alt="动漫图片"> <!-- 替换为你的图片链接 -->
+        <h3 class="anime-title">《进击的巨人》</h3>
+        <div class="anime-meta">
+          <span>类型: 动作, 悬疑</span>
+          <span>集数: 26</span>
+          <span>年份: 2013</span>
+          <span>豆瓣评分: 9.4</span>
+        </div>
+        <p class="anime-description">
+          《进击的巨人》是一部描绘人类与巨人战斗的作品，讲述了艾伦和他的伙伴们如何对抗巨人的故事。作品以其紧张刺激的剧情和深刻的寓意赢得了无数粉丝的喜爱。
+        </p>
+        <p class="anime-source">播放来源: B站, 腾讯视频</p>
+        <div class="comments">
+          <div class="comment">
+            <span class="comment-author">用户E:</span>
+            <span class="comment-text">非常震撼的作品，每一个细节都处理得很好。</span>
+          </div>
+          <div class="comment">
+            <span class="comment-author">用户F:</span>
+            <span class="comment-text">最后一集真是意犹未尽，期待续作。</span>
+          </div>
+        </div>
+      </div>
+      <div class="anime-item">
+        <img src="./4.jpg" alt="动漫图片"> <!-- 替换为你的图片链接 -->
+        <h3 class="anime-title">《刀剑神域》</h3>
+        <div class="anime-meta">
+          <span>类型: 动作, 科幻</span>
+          <span>集数: 25</span>
+          <span>年份: 2012</span>
+          <span>豆瓣评分: 8.5</span>
+        </div>
+        <p class="anime-description">
+          《刀剑神域》是一部关于虚拟游戏的作品，讲述了主人公桐人在虚拟世界中冒险的故事。作品以其创新的游戏设定和丰富的剧情吸引了大量观众。
+        </p>
+        <p class="anime-source">播放来源: B站, 腾讯视频</p>
+        <div class="comments">
+          <div class="comment">
+            <span class="comment-author">用户G:</span>
+            <span class="comment-text">最喜欢里面的虚拟现实设定，非常有趣。</span>
+          </div>
+          <div class="comment">
+            <span class="comment-author">用户H:</span>
+            <span class="comment-text">每个角色都有自己的特点，非常吸引人。</span>
+          </div>
+        </div>
+      </div>
+      <div class="anime-item">
+        <img src="./5.jpg" alt="动漫图片"> <!-- 替换为你的图片链接 -->
+        <h3 class="anime-title">《海贼王》</h3>
+        <div class="anime-meta">
+          <span>类型: 冒险, 动作</span>
+          <span>集数: 1000+</span>
+          <span>年份: 1999</span>
+          <span>豆瓣评分: 9.2</span>
+        </div>
+        <p class="anime-description">
+          《海贼王》是一部关于海盗冒险的作品，讲述了路飞和他的伙伴们在大海上寻找宝藏的故事。作品以其丰富多彩的角色和激动人心的冒险情节成为经典之作。
+        </p>
+        <p class="anime-source">播放来源: B站, 腾讯视频</p>
+        <div class="comments">
+          <div class="comment">
+            <span class="comment-author">用户I:</span>
+            <span class="comment-text">最喜欢路飞的坚持和勇气，值得一看。</span>
+          </div>
+          <div class="comment">
+            <span class="comment-author">用户J:</span>
+            <span class="comment-text">剧情非常连贯，期待后续的发展。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
