@@ -1,0 +1,27 @@
+@import './base.css';
+
+body {
+  font-size: 16px; /* 默认字体大小 */
+}
+
+/* 搜索框 */
+.van-search__content--round {
+  border:1px solid #ccc;
+}
+
+.menu-box {
+  width: 50%;margin:0 auto;
+  display: flex;
+  justify-content: center;
+}
+.ant-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ant-menu-horizontal {
+  border-bottom:1px solid rgba(5, 5, 5, 0);
+}
+.van-cell__title {font-weight: bold;}
+.mini {font-size: 0.8rem;}
+

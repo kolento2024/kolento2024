@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>静态网页模版商城</title>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js">
+
+      // 动态设置根元素的字体大小
+      function setRemUnit() {
+        const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        const baseWidth = 375; // 基准宽度（以 iPhone 6s 的宽度 375px 为例）
+        const baseFontSize = 16; // 基准字体大小
+        const scale = baseWidth / htmlWidth;
+        document.documentElement.style.fontSize = `${baseFontSize / scale}px`;
+        
+        // 最小字体大小限制
+        const minFontSize = 12; // 最小字体大小
+        if (document.documentElement.style.fontSize < `${minFontSize}px`) {
+          document.documentElement.style.fontSize = `${minFontSize}px`;
+        }
+      }
+
+      // 页面加载时设置
+      window.addEventListener('load', setRemUnit);
+
+      // 窗口大小变化时重新设置
+      window.addEventListener('resize', setRemUnit);
+
+    </script>
   </body>
 </html>
