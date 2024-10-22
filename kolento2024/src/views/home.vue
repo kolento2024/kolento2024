@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <Top/>
-    <div class="content">
+    <div class="cont-box">
       <Filter/>
+    </div>
+
+    <div class="cont-box pro-wrap">
       <div class="pro-box">
         <ul class="pro-con">
           <li class="pro-list" v-for="(item, index) in proGroup" :key="index">
@@ -46,33 +49,45 @@
 </script>
 
 <style scoped lang="scss">
-  .content {
+  .cont-box {
     background: #eff2f5;
     padding: 4.6rem 1rem 1rem;
   }
+  .pro-wrap {
+    background: #eff2f5;
+    padding: 0 0.8rem 1rem;
+  }
   .pro-box {
     width: 100%;
-    margin-top: 0.8rem;
     .pro-con {
       display:flex;
       flex-wrap: wrap;
       width: 100%;
-      justify-content: space-between;
     }
     .pro-list {
-      width: calc(25% - 0.6rem);
+      width: calc(20% - 0.6rem);
       background: #fff;
       border-radius:0.4rem;
       position: relative;
       overflow: hidden;
-      margin-bottom: 0.8rem;
+      margin:0 0.3rem 0.8rem;
+      cursor: pointer;
+      padding-bottom: 0.2rem;
+      box-shadow:0 5px 10px rgba(0, 0, 0, 0.15);
       .pro-img {
         width: 100%;
         overflow: hidden;
         height: 12rem;
-        border-radius:0.4rem;
+        border-radius:0.4rem 0.4rem 0 0;
         position: relative;
-        img{width: 100%;}
+        img{
+          width: 100%;
+          transition:all ease 0.3s;
+          transform: scale(1);
+        }
+        img:hover{
+          transform: scale(1.1);
+        }
       }
       .name {
         padding:0.6rem 0.6rem 0 0.6rem;
@@ -101,15 +116,24 @@
     }
   }
 
+  @media screen and (max-width: 1600px) {
+    .pro-list {
+      width: calc(25% - 0.6rem)!important;
+      margin:0 0.3rem 0.8rem!important;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     .pro-list {
-      width: calc(33.33% - 0.4rem)!important;
+      width: calc(33.33% - 0.6rem)!important;
+      margin:0 0.3rem 0.8rem!important;
     }
   }
 
   @media screen and (max-width: 1000px) {
     .pro-list {
-      width: calc(50% - 0.4rem)!important;
+      width: calc(50% - 0.6rem)!important;
+      margin:0 0.3rem 0.8rem!important;
     }
   }
 </style>

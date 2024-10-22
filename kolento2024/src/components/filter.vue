@@ -92,7 +92,9 @@
 
 <style scoped lang="scss">
   .filter {
-
+    box-shadow:0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius:0.5rem;
+    overflow: hidden;
   }
   .tag-con {
     display:flex;
