@@ -72,7 +72,7 @@
         height: 12rem;
         border-radius:0.4rem;
         position: relative;
-        img{width: 100%;height: 100%;}
+        img{width: 100%;}
       }
       .name {
         padding:0.6rem 0.6rem 0 0.6rem;
