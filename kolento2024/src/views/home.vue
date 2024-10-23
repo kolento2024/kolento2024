@@ -26,93 +26,17 @@
       <div class="container">
         <div class="row">
           <h2 class="title">10元特价</h2>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-1.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 01</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-2.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-2.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 02</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-3.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-3.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 03</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-4.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-4.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 04</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-5.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-5.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 05</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-6.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-6.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 06</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-7.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-7.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 07</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-8.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-8.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 08</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-9.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-9.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 09</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-10.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-10.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 10</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a href="drimo/index-11.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/index-11.png" class="img-responsive radius" alt="">
-                      <p class="product-title">OnePage - 11</p>
-                  </div>
-              </a>
+          <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item,idx) in specialGroup" :key="idx">
+            <a href="drimo/index.html" target="_blank">
+              <div class="item-imag">
+                <img :src="item.pic" class="img-responsive radius" alt="">
+                <p class="product-title">{{ item.name }}</p>
+                <div class="info">
+                  <p class="price">{{ item.price }}</p>
+                  <p class="page">{{ item.page }}</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -163,11 +87,443 @@
 </template>
 
 <script setup>
-  
+  import {ref} from 'vue';
+
+  // 特价产品示图
+  import specialPic1 from '@/assets/images/product/index-1.png';
+
+  // 特价数据
+  let specialGroup = ref([
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:5,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:6,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+  ])
 </script>
 
 <style scoped lang="scss">
-  
+  .m0 {
+      margin: 0;
+  }
+
+  .p0 {
+      padding: 0;
+  }
+
+  body {
+      font-family: 'Montserrat';
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 35px;
+      color: #222;
+  }
+
+  a,
+  .btn,
+  button {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.6s ease-in-out;
+  }
+
+  a:hover,
+  a:focus,
+  .btn:hover,
+  .btn:focus,
+  button:hover,
+  button:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus,
+  .btn.focus,
+  .btn:active.focus,
+  .btn.active.focus {
+      outline: none !important;
+      box-shadow: none !important;
+  }
+  .btn.view-demo.active{
+      outline: none !important;
+      box-shadow: none !important;
+  }
+
+  p {
+      margin: 0px;
+  }
+
+  ul,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0px;
+  }
+
+  section.row,
+  header.row,
+  footer.row {
+      margin: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  .hero-area-fix {
+    position: relative;
+    width: 100%;
+    content: '';
+    background: url('@/assets/images/header/slider-1.png') no-repeat scroll center center;
+    background-size: cover;
+    min-height: 900px;
+    z-index: 1;
+  }
+
+  .product-landing .col-md-4{
+    margin-bottom: 40px;
+  }
+
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .hero-text h1 {
+    font-family: 'Montserrat';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+
+  .hero-text h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    min-height: 40px;
+  }
+
+  .hero-text h4 {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  .view-demo {
+      font-family: 'Montserrat';
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #fff;
+      color: #191919;
+      padding: 15px 62px;
+      border-radius: 50px;
+      margin-right: 15px;
+  }
+
+  .view-demo:hover {
+    color: #f8395d;
+  }
+
+  .buy-now {
+      font-family: 'Montserrat';
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #fff;
+      color: #191919;
+      padding: 15px 62px;
+      border-radius: 50px;
+  }
+
+  @keyframes slideShow {
+      0% {
+          opacity: 1;
+          transform: scale(1);
+          -ms-transform: scale(1);
+      }
+      5% {
+          opacity: 1
+      }
+      25% {
+          opacity: 1;
+      }
+      30% {
+          opacity: 1;
+          transform: scale(1.1);
+          -ms-transform: scale(1.1);
+      }
+      100% {
+          opacity: 1;
+          transform: scale(1);
+          -ms-transform: scale(1);
+      }
+  }
+
+  @-o-keyframes slideShow {
+      0% {
+          opacity: 1;
+          -o-transform: scale(1);
+      }
+      5% {
+          opacity: 1
+      }
+      25% {
+          opacity: 1;
+      }
+      30% {
+          opacity: 1;
+          -o-transform: scale(1.1);
+      }
+      100% {
+          opacity: 1;
+          -o-transformm: scale(1);
+      }
+  }
+
+  @-moz-keyframes slideShow {
+      0% {
+          opacity: 1;
+          -moz-transform: scale(1);
+      }
+      5% {
+          opacity: 1
+      }
+      25% {
+          opacity: 1;
+      }
+      30% {
+          opacity: 1;
+          -moz-transform: scale(1.1);
+      }
+      100% {
+          opacity: 1;
+          -moz-transformm: scale(1);
+      }
+  }
+
+  @-webkit-keyframes slideShow {
+      0% {
+          opacity: 1;
+          -webkit-transform: scale(1);
+      }
+      5% {
+          opacity: 1
+      }
+      25% {
+          opacity: 1;
+      }
+      30% {
+          opacity: 1;
+          -webkit-transform: scale(1.1);
+      }
+      100% {
+          opacity: 1;
+          -webkit-transformm: scale(1);
+      }
+  }
+
+  .buy-now:hover {
+    background: #fff;
+    color: #f8395d;
+  }
+
+  .product-landing {
+    padding-top: 113px;
+    padding-bottom: 70px;
+  }
+
+  .radius {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 80px;
+  }
+
+  .product-title {
+    font-size: 15px;
+    color: #4f4f4f;
+    text-align: center;
+    height: 95px;
+    padding-top: 25px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background: #fff !important;
+    font-weight: 400;
+  }
+
+  .item-imag {
+    transition: .3s;
+    border-radius: 6px 6px 0 0;
+    -webkit-box-shadow: 0px 0px 57px -11px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 57px -11px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 57px -11px rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .item-imag:hover {
+    transition: .3s;
+    border-radius: 0 0 6px 6px;
+    border-radius: 6px;
+  }
+
+  .item-imag:hover .product-title {
+    background: #f8395d !important;
+    color: #fff;
+    transition: .5s;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 4px 6px -3px #959595;
+  }
+
+  .info {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // background: linear-gradient(0deg,transparent,rgba(0,0,0,.8));
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:0.6rem 0.6rem;
+    p{margin-bottom: 0;}
+    .price {color:#fafd00;}
+    .page {color:#fff;}
+  }
+
+  .item-imag span{
+    position: absolute;
+    top: -13px;
+    right: 0;
+    background: #f8395d;
+    width: 60px;
+    height: 25px;
+    border-radius: 40px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 25px;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .item-imag:after {
+    content: '';
+  }
+
+  .saas-landing {
+    background: #f7f7f7;
+    padding: 120px 0;
+  }
+
+  .footer-area {
+    background: #161716;
+    padding: 50px 0;
+      
+  }
+
+  .fotter-head {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .fotter-head a{
+    color: #78c81f;
+  }
+  .fotter-head a:hover{
+    color: #64aa16;
+  }
+
+  .copyright {
+    color: #97989b;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400px;
+  }
+
+  .line {
+    background: #1aabec;
+    height: 2px;
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .mr{
+      margin-top: 30px;
+  }
+  .mocc img {
+      margin: 0 auto;
+  }
+
+  .mocc {
+      margin-top: 75px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    .view-demo {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 413px) {
+    .product-landing .col-xs-12 {
+        margin-bottom: 40px;
+    }
+    .saas-landing .col-xs-12 {
+        margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width:991px){
+    .col-sm-6{
+        margin-bottom: 40px;
+    }
+  }
+  @media all and (min-width: 412px) and (max-width: 767px) {
+    .col-xs-12 {
+        width: 56%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;
+    }
+  }
+
 
 </style>
  
