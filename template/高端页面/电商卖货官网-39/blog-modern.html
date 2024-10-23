@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Blog Modern</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.preloader{position:fixed;left:0;top:0;bottom:0;right:0;z-index:10000;display:flex;justify-content:center;align-items:center;padding:20px;background:#fff;transition:.3s all ease}.preloader.loaded{opacity:0;visibility:hidden}.preloader-body{text-align:center}.preloader-body p{position:relative;right:-8px;top:10px}#circular3dG{position:relative;width:75px;height:75px;margin:auto}.circular3dG{position:absolute;background-color:#764ebe;width:21px;height:21px;border-radius:23px;-o-border-radius:23px;-ms-border-radius:23px;-webkit-border-radius:23px;-moz-border-radius:23px;animation-name:bounce_circular3dG;-o-animation-name:bounce_circular3dG;-ms-animation-name:bounce_circular3dG;-webkit-animation-name:bounce_circular3dG;-moz-animation-name:bounce_circular3dG;animation-duration:932ms;-o-animation-duration:932ms;-ms-animation-duration:932ms;-webkit-animation-duration:932ms;-moz-animation-duration:932ms;animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-direction:normal;-o-animation-direction:normal;-ms-animation-direction:normal;-webkit-animation-direction:normal;-moz-animation-direction:normal}#circular3d_1G{left:30px;top:5px;animation-delay:.3495s;-o-animation-delay:.3495s;-ms-animation-delay:.3495s;-webkit-animation-delay:.3495s;-moz-animation-delay:.3495s}#circular3d_2G{left:46px;top:18px;animation-delay:466ms;-o-animation-delay:466ms;-ms-animation-delay:466ms;-webkit-animation-delay:466ms;-moz-animation-delay:466ms}#circular3d_3G{left:55px;top:34px;animation-delay:.5825s;-o-animation-delay:.5825s;-ms-animation-delay:.5825s;-webkit-animation-delay:.5825s;-moz-animation-delay:.5825s}#circular3d_4G{left:51px;top:50px;animation-delay:699ms;-o-animation-delay:699ms;-ms-animation-delay:699ms;-webkit-animation-delay:699ms;-moz-animation-delay:699ms}#circular3d_5G{left:31px;top:55px;animation-delay:.8155s;-o-animation-delay:.8155s;-ms-animation-delay:.8155s;-webkit-animation-delay:.8155s;-moz-animation-delay:.8155s}#circular3d_6G{left:6px;top:36px;animation-delay:932ms;-o-animation-delay:932ms;-ms-animation-delay:932ms;-webkit-animation-delay:932ms;-moz-animation-delay:932ms}#circular3d_7G{left:0;top:10px;animation-delay:1.0485s;-o-animation-delay:1.0485s;-ms-animation-delay:1.0485s;-webkit-animation-delay:1.0485s;-moz-animation-delay:1.0485s}#circular3d_8G{left:13px;top:0;animation-delay:1.165s;-o-animation-delay:1.165s;-ms-animation-delay:1.165s;-webkit-animation-delay:1.165s;-moz-animation-delay:1.165s}@keyframes bounce_circular3dG{0%{transform:scale(1)}100%{transform:scale(.3)}}@-o-keyframes bounce_circular3dG{0%{-o-transform:scale(1)}100%{-o-transform:scale(.3)}}@-ms-keyframes bounce_circular3dG{0%{-ms-transform:scale(1)}100%{-ms-transform:scale(.3)}}@-webkit-keyframes bounce_circular3dG{0%{-webkit-transform:scale(1)}100%{-webkit-transform:scale(.3)}}@-moz-keyframes bounce_circular3dG{0%{-moz-transform:scale(1)}100%{-moz-transform:scale(.3)}} .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div id="circular3dG">
+          <div class="circular3dG" id="circular3d_1G"></div>
+          <div class="circular3dG" id="circular3d_2G"></div>
+          <div class="circular3dG" id="circular3d_3G"></div>
+          <div class="circular3dG" id="circular3d_4G"></div>
+          <div class="circular3dG" id="circular3d_5G"></div>
+          <div class="circular3dG" id="circular3d_6G"></div>
+          <div class="circular3dG" id="circular3d_7G"></div>
+          <div class="circular3dG" id="circular3d_8G"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xg-stick-up-offset="46px" data-xxl-stick-up-offset="46px">
+            <div class="rd-navbar-top-panel-wrap">
+              <div class="rd-navbar-top-panel">
+                <div class="left-side">
+                  <!-- Contact Info-->
+                  <address class="contact-info text-left">
+                    <div class="d-inline-block"><a class="unit align-items-xl-center flex-row unit-spacing-xxs" href="#"><span class="unit-left"><span class="icon icon-sm icon-primary icon-circle mdi mdi-map-marker text-bermuda"></span></span><span class="unit-body"><span class="text-gray-lighter">2130 Fulton Street, San Diego, CA 94117-1080 USA</span></span></a></div>
+                    <div class="d-inline-block">
+                      <div class="unit align-items-center flex-row unit-spacing-xxs">
+                        <div class="unit-left">
+                          <div class="icon icon-sm icon-primary icon-circle mdi mdi-calendar-clock text-bermuda"></div>
+                        </div>
+                        <div class="unit-body">
+                          <div class="text-gray-lighter">Mon–Sun: 9:00am–9:00pm</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-inline-block"><a class="unit align-items-center flex-row unit-spacing-xxs" href="tel:#"><span class="unit-left"><span class="icon icon-sm icon-primary icon-circle mdi mdi-phone text-bermuda"></span></span><span class="unit-body"><span class="text-gray-lighter">1-800-1234-567</span></span></a></div>
+                  </address>
+                </div>
+                <div class="right-side">
+                  <ul class="list-inline list-inline-2 list-primary">
+                    <li><a class="icon icon-xs icon-circle fa fa-facebook text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-twitter text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-pinterest-p text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-vimeo text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-google text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-rss text-gray-lighter" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-left-side">
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+                  </div>
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle-search-fixed d-lg-none d-tablet" data-rd-navbar-toggle=".rd-navbar-search-wrap-fixed"></button>
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-collapse-toggle d-xl-none d-lg-inline-block" data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></button>
+                </div>
+              </div>
+              <div class="rd-navbar-right-side">
+                <div class="rd-navbar-nav-wrap d-inline-block">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-variant-2.html">Home Variant 2</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-variant-3.html">Home Variant 3</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="entertainment.html">Services</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shops.html">Shops</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="food.html">Food</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="entertainment.html">Entertainment</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="parking.html">Parking</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gift-cards.html">Gift Cards</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="events.html">Events</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="events.html">All Events</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="event-single.html">Event Page</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="sales.html">Sales</a>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="blog-classic.html">Blog</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-classic.html">Blog Classic</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-grid.html">Blog Grid</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-masonry.html">Blog Masonry</a>
+                        </li>
+                        <li class="rd-dropdown-item active"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog Post</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
+                      <ul class="rd-menu rd-navbar-megamenu">
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid.html">Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503.html">503 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maintenance.html">Maintenance</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sitemap.html">Site map</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy Policy</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="directions.html">Directions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sale-single.html">Sale Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="shop-single.html">Shop Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="restaurant-single.html">Restaurant Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid.html">Gallery Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid-without-padding.html">Gallery Grid without Padding</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-cobbles.html">Gallery Cobbles</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-masonry.html">Gallery Masonry</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--RD Navbar Search-->
+                <div class="rd-navbar-search-wrap-fixed d-inline-block">
+                  <div class="rd-navbar-search-wrap">
+                    <div class="rd-navbar-search"><a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                      <form class="rd-search rd-navbar-search-custom" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                        <div class="form-group">
+                          <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                          <input class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                          <button type="submit"><span class="icon icon-xs fa fa-search"></span></button>
+                        </div>
+                        <div class="rd-search-results-live d-none d-xl-block" id="rd-search-results-live"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle-search d-none d-lg-inline-block veil-tablet" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs-->
+      <section class="section-height-800 breadcrumb-modern parallax-container context-dark bg-gray-darkest d-none d-lg-block" data-parallax-img="images/backgrounds/background-01-1920-900.jpg">
+        <div class="parallax-content">
+          <div class="bg-overlay-darker">
+            <div class="container-wide section-34 section-md-60 section-lg-top-130 section-lg-bottom-155">
+              <div class="d-none d-lg-block">
+                <div class="h1 breadcrumbs-custom-title">Blog Modern</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-34 bg-selago">
+        <div class="container">
+          <ul class="list-inline list-inline-12 list-inline-icon breadcrumbs-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-classic.html">Blog</a></li>
+            <li class="active">Blog Modern</li>
+          </ul>
+        </div>
+      </section>
+      <div class="page-content section-80 section-md-120">
+        <!-- News Modern-->
+        <section class="text-left">
+          <div class="inset-xl-left-45 inset-xl-right-45 inset-xxl-left-155 inset-xxl-right-85">
+            <div class="container-wide container-wide-custom">
+              <div class="row justify-content-sm-center justify-content-xl-end justify-content-xxl-between">
+                <div class="col-md-10 col-xl-8 col-xxl-7">
+                  <div class="inset-xl-right-35 inset-xxl-right-0">
+                    <!-- Post Modern Timeline-->
+                    <article class="post post-modern post-modern-timeline post-modern-timeline-left">
+                      <!-- Post media-->
+                      <header class="post-media"><a class="thumbnail-classic" href="blog-post.html">
+                          <figure><img class="img-responsive img-cover" width="702" height="460" src="images/blog/post-01-720x460.jpg" alt=""></figure></a></header>
+                      <!-- Post content-->
+                      <section class="post-content text-left offset-top-30">
+                        <!-- Post Title-->
+                        <div class="post-title">
+                          <h5><a href="blog-post.html">Top 3 Reasons to Visit Fashion Day at Any Season and How You Can Benefit From It</a></h5>
+                        </div>
+                        <!-- Post Body-->
+                        <div class="post-body offset-top-20">
+                          <p>Regardless of what season it is now, there are always plenty of reasons to visit our mall. In this article, we decided to show you the list of Top 3 reasons to visit Fashion Day. to begin with, people usually visit shopping malls to enjoy variety while shopping, for socialization and for entertainment. People also visit malls because they offer one-stop shopping convenience and save time.</p>
+                        </div>
+                        <div class="offset-top-20"><a class="btn btn-tag btn-primary-outline" href="#">Articles</a></div>
+                        <div class="post-author">
+                          <div class="post-author-img"><img class="rounded-circle" width="120" height="120" src="images/users/user-diana-hawkins-120x120.jpg" alt="Michael Ford"></div>
+                          <div class="d-inline-block text-middle">
+                            <h6 class="post-author-name text-bermuda">Diana Hawkins</h6>
+                            <div class="post-meta text-lg-center">Sep 21, 2019 <br> at 3:59pm</div>
+                          </div>
+                        </div>
+                      </section>
+                    </article>
+                    <!-- Post Modern Timeline-->
+                    <article class="post post-modern post-modern-timeline post-modern-timeline-left">
+                      <!-- Post media-->
+                      <header class="post-media"><a class="thumbnail-classic" href="blog-post.html">
+                          <figure><img class="img-responsive img-cover" width="702" height="460" src="images/blog/post-02-720x460.jpg" alt=""></figure></a></header>
+                      <!-- Post content-->
+                      <section class="post-content text-left offset-top-30">
+                        <!-- Post Title-->
+                        <div class="post-title">
+                          <h5><a href="blog-post.html">Perfect Clothes to Wear When It’s Hot</a></h5>
+                        </div>
+                        <!-- Post Body-->
+                        <div class="post-body offset-top-20">
+                          <p>In the middle of a heatwave, your corporate uniform—the usual blazers, slacks, and button-downs—is the last thing you want to wear to work. What to slip into instead? Lightweight separates, breathable sandals, and sophisticated accessories that help pull your look together. Don’t sweat it: We’ve got five warm weather-friendly outfits that work for your nine-to-five.</p>
+                        </div>
+                        <div class="offset-top-20"><a class="btn btn-tag btn-primary-outline" href="#">Articles</a></div>
+                        <div class="post-author">
+                          <div class="post-author-img"><img class="rounded-circle" width="120" height="120" src="images/users/user-susan-rose-120x120.jpg" alt="Joyce Contreras"></div>
+                          <div class="d-inline-block text-middle">
+                            <h6 class="post-author-name text-bermuda">Susan Rose</h6>
+                            <div class="post-meta text-lg-center">Sep 21, 2019 <br> at 3:59pm</div>
+                          </div>
+                        </div>
+                      </section>
+                    </article>
+                    <!-- Post Modern Timeline-->
+                    <article class="post post-modern post-modern-timeline post-modern-timeline-left post-modern-timeline-left-border-none">
+                      <!-- Post media-->
+                      <header class="post-media"><a class="thumbnail-classic" href="blog-post.html">
+                          <figure><img class="img-responsive img-cover" width="702" height="460" src="images/blog/post-03-720x460.jpg" alt=""></figure></a></header>
+                      <!-- Post content-->
+                      <section class="post-content text-left offset-top-30">
+                        <!-- Post Title-->
+                        <div class="post-title">
+                          <h5><a href="blog-post.html">Planning Your Weekend? Visit  Fashion Day!</a></h5>
+                        </div>
+                        <!-- Post Body-->
+                        <div class="post-body offset-top-15">
+                          <p>Fashion Day often evokes memories of endless shopping, thrilling rides or concerts. But we found it to be the perfect destination for another activity: a weekend getaway with your friends or family! Here’s an itinerary for a jaunt around the 5.6 million square-foot Mall that will make you and your company want to schedule a trip ASAP.</p>
+                        </div>
+                        <div class="offset-top-20"><a class="btn btn-tag btn-primary-outline" href="#">Articles</a></div>
+                        <div class="post-author">
+                          <div class="post-author-img"><img class="rounded-circle" width="120" height="120" src="images/users/user-andrea-kelly-120x120.jpg" alt="Andrea Kelly"></div>
+                          <div class="d-inline-block text-middle">
+                            <h6 class="post-author-name text-bermuda">Andrea Kelly</h6>
+                            <div class="post-meta text-lg-center">Sep 21, 2019 <br> at 3:59pm</div>
+                          </div>
+                        </div>
+                      </section>
+                    </article>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-4 offset-top-90 offset-xl-top-0">
+                  <div class="inset-lg-left-30">
+                    <!-- Aside-->
+                    <aside class="text-left inset-xxl-right-50">
+                      <!-- Search the Blog-->
+                      <hr class="divider hr-left-0 bg-bermuda">
+                      <h5 class="offset-top-15">Search the Blog</h5>
+                      <div class="offset-top-25 rd-search-blog">
+                        <!-- RD Search Form-->
+                        <form class="form-inline-custom form-search rd-search" action="search-results.html" method="GET">
+                          <div class="form-group">
+                            <div class="input-group">
+                              <label class="form-label form-search-label" for="blog-classic-form-search-widget">Search...</label>
+                              <input class="form-search-input form-control null" id="blog-classic-form-search-widget" type="text" name="s" autocomplete="off">
+                            </div>
+                            <div class="input-group-btn">
+                              <button class="btn btn-primary form-search-submit" type="submit">search</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- Archive-->
+                      <div class="offset-top-60 offset-lg-top-90">
+                        <hr class="divider hr-left-0 bg-bermuda">
+                        <h5 class="offset-top-15">Archive</h5>
+                        <div class="row justify-content-sm-center offset-top-30">
+                          <div class="col-sm-6">
+                            <div class="inset-sm-left-8">
+                              <!-- List Marked-->
+                              <ul class="list list-marked list-marked-icon text-dark">
+                                <li><a class="text-primary" href="#">January 2019</a></li>
+                                <li><a class="text-primary" href="#">March 2019</a></li>
+                                <li><a class="text-primary" href="#">May 2019</a></li>
+                                <li><a class="text-primary" href="#">July 2019</a></li>
+                                <li><a class="text-primary" href="#">September 2019</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 offset-top-10 offset-sm-top-0 inset-sm-left-8">
+                            <!-- List Marked-->
+                            <ul class="list list-marked list-marked-icon text-dark">
+                              <li><a class="text-primary" href="#">February 2019</a></li>
+                              <li><a class="text-primary" href="#">April 2019</a></li>
+                              <li><a class="text-primary" href="#">June 2019</a></li>
+                              <li><a class="text-primary" href="#">August 2019</a></li>
+                              <li><a class="text-primary" href="#">October 2019</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Gallery-->
+                      <div class="offset-top-60 offset-lg-top-90">
+                        <hr class="divider hr-left-0 bg-bermuda">
+                        <h5 class="offset-top-15 text-left">Gallery</h5>
+                        <div class="row justify-content-sm-start no-gutters section-gallery-lg-column-offset offset-top-30" data-lightgallery="group">
+                          <div class="col-md-10 col-xl-12">
+                            <div class="row no-gutters justify-content-sm-start">
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x842" href="images/gallery/portfolio-01-1170x842_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-17-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13 offset-top-30 offset-sm-top-0">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x731" href="images/gallery/portfolio-23-1170x731_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-18-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13 offset-top-30 offset-sm-top-0">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x780" href="images/gallery/portfolio-25-1170x780_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-19-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13 offset-top-30 offset-sm-top-0">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x780" href="images/gallery/portfolio-24-1170x780_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-20-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13 offset-top-30 offset-sm-top-0">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x842" href="images/gallery/portfolio-27-1170x842_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-21-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                              <div class="col-sm-4 col-lg-4 inset-xl-left-13 inset-xl-right-13 offset-top-30 offset-sm-top-0">
+                                <!-- Thumbnail Rayen--><a class="thumbnail-rayen" data-lightgallery="item" data-size="1170x807" href="images/gallery/portfolio-26-1170x807_original.jpg"><span class="figure"><img width="160" height="160" src="images/gallery/portfolio-22-640x640.jpg" alt=""><span class="figcaption"><span class="icon icon-xs fa-plus"></span></span></span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Categories-->
+                      <div class="offset-top-60 offset-lg-top-90">
+                        <hr class="divider hr-left-0 bg-bermuda">
+                        <h5 class="offset-top-15">Categories</h5>
+                      </div>
+                      <div class="offset-top-30">
+                        <div class="inset-sm-left-8">
+                          <!-- List Marked-->
+                          <ul class="list list-marked list-marked-icon">
+                            <li><a class="text-primary" href="#">News <span class="text-gray-lighter">(25)</span></a></li>
+                            <li><a class="text-primary" href="#">Shops <span class="text-gray-lighter">(17)</span></a></li>
+                            <li><a class="text-primary" href="#">Restaurants & Cafes <span class="text-gray-lighter">(13)</span></a></li>
+                            <li><a class="text-primary" href="#">Entertainment <span class="text-gray-lighter">(21)</span></a></li>
+                            <li><a class="text-primary" href="#">Events <span class="text-gray-lighter">(29)</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Recent Posts-->
+                      <div class="offset-top-60 offset-lg-top-90">
+                        <hr class="divider hr-left-0 bg-bermuda">
+                        <h5 class="offset-top-15">Recent Posts</h5>
+                      </div>
+                      <div class="offset-top-30">
+                        <!-- Unit-->
+                        <div class="unit flex-row">
+                          <div class="unit-left"><img class="img-responsive center-block" src="images/blog/post-04-80x80.jpg" width="80" height="80" alt=""></div>
+                          <div class="unit-body">
+                            <h6><a href="blog-post.html">Top 3 Reasons to Visit Fashion Day at Any Season</a></h6>
+                            <div class="offset-top-10">
+                              <!-- List Inline-->
+                              <ul class="list-inline list-inline-dashed list-inline-12 text-gray font-italic p">
+                                <li>2 days ago</li>
+                                <li><a class="text-bermuda" href="#">Articles</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="offset-top-30">
+                        <!-- Unit-->
+                        <div class="unit flex-row">
+                          <div class="unit-left"><img class="img-responsive center-block" src="images/blog/post-05-80x80.jpg" width="80" height="80" alt=""></div>
+                          <div class="unit-body">
+                            <h6><a href="blog-post.html">Perfect Clothes to Wear When It’s Hot</a></h6>
+                            <div class="offset-top-10">
+                              <!-- List Inline-->
+                              <ul class="list-inline list-inline-dashed list-inline-12 text-gray font-italic p">
+                                <li>2 days ago</li>
+                                <li><a class="text-bermuda" href="#">Articles</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="offset-top-30">
+                        <!-- Unit-->
+                        <div class="unit flex-row">
+                          <div class="unit-left"><img class="img-responsive center-block" src="images/blog/post-06-80x80.jpg" width="80" height="80" alt=""></div>
+                          <div class="unit-body">
+                            <h6><a href="blog-post.html">Planning Your Weekend? Visit  Fashion Day!</a></h6>
+                            <div class="offset-top-10">
+                              <!-- List Inline-->
+                              <ul class="list-inline list-inline-dashed list-inline-12 text-gray font-italic p">
+                                <li>2 days ago</li>
+                                <li><a class="text-bermuda" href="#">Articles</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Tags-->
+                      <div class="offset-top-60 offset-lg-top-90">
+                        <hr class="divider hr-left-0 bg-bermuda">
+                        <h5 class="offset-top-15">Tags</h5>
+                      </div>
+                      <div class="offset-top-30">
+                        <div class="group group-sm"><a class="btn btn-tag btn-primary-outline" href="shops.html">Shops</a><a class="btn btn-tag btn-primary-outline" href="entertainment.html">Entertaiment</a><a class="btn btn-tag btn-primary-outline" href="blog-classic.html">Blog</a><a class="btn btn-tag btn-primary-outline" href="gift-cards.html">Fashion</a><a class="btn btn-tag btn-primary-outline" href="food.html">Cafe</a><a class="btn btn-tag btn-primary-outline" href="entertainment.html">Services</a><a class="btn btn-tag btn-primary-outline" href="parking.html">Parking</a><a class="btn btn-tag btn-primary-outline" href="blog-masonry.html">Articles</a></div>
+                      </div>
+                    </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Page Footer-->
+      <footer class="page-footer bg-shark section-80 section-lg-top-120 section-lg-bottom-60">
+        <div class="container-wide">
+          <div class="row justify-content-sm-center inset-xxl-left-55 row-40">
+            <div class="col-sm-6 col-md-5 col-xl-4 col-xxl-4 text-xxl-center">
+              <p class="text-gray-lighter text-left inset-xxl-right-140">Audrey Mail is a four-story shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-75">
+                <li><a class="text-bermuda" href="shops.html">Shops</a></li>
+                <li><a class="text-bermuda" href="food.html">Food</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Entertainment</a></li>
+                <li><a class="text-bermuda" href="parking.html">Parking</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-100">
+                <li><a class="text-bermuda" href="gift-cards.html">Mall Gift Cards</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">About Us</a></li>
+                <li><a class="text-bermuda" href="directions.html">Directions</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Services</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-center">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-140">
+                <li><a class="text-bermuda" href="events.html">Events</a></li>
+                <li><a class="text-bermuda" href="sales.html">Sales</a></li>
+                <li><a class="text-bermuda" href="blog-classic.html">Latest News</a></li>
+                <li><a class="text-bermuda" href="contacts.html">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-sm-center align-items-sm-center justify-content-xxl-between offset-xl-top-75 row-40 offset-top-50">
+            <div class="col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-xxl-center text-md-left">
+              <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 text-xxl-center">
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a class="text-gray-light" href="privacy-policy.html">Privacy Policy</a> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

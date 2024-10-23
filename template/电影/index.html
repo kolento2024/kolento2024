@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影列表</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .carousel-prev,
+    .carousel-next {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+    .tab-link {
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-bottom-color: #ddd;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .tab-link::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #007BFF;
+      transition: width 0.3s ease;
+    }
+    .tab-link.active::after {
+      width: calc(100% - 20px); /* Adjust for padding */
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-top: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .movie-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .movie-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .movie-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .movie-item-content {
+      padding: 15px;
+    }
+    .movie-item-title {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .movie-item-meta {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .movie-item-comments {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      display: none;
+      z-index: 1;
+    }
+    .movie-item:hover .movie-item-comments {
+      display: block;
+    }
+    .comments-con {
+      padding:8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-slide" style="background-image: url('./images/banner1.webp');"></div>
+      <div class="carousel-slide" style="background-image: url('./images/banner2.webp');"></div>
+      <div class="carousel-slide" style="background-image: url('./images/banner3.webp');"></div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-prev">&lt;</button>
+      <button class="carousel-next">&gt;</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="tabs">
+      <a href="#" class="tab-link active" data-tab="hot">热门电影</a>
+      <a href="#" class="tab-link" data-tab="highscore">高分电影</a>
+      <a href="#" class="tab-link" data-tab="newrelease">新片速递</a>
+      <a href="#" class="tab-link" data-tab="comingsoon">即将上映</a>
+    </div>
+    <div class="tab-content active" id="hot">
+      <div class="movie-list">
+        <!-- 热门电影推荐动态生成 -->
+      </div>
+    </div>
+    <div class="tab-content" id="highscore">
+      <div class="movie-list">
+        <!-- 高分电影推荐动态生成 -->
+      </div>
+    </div>
+    <div class="tab-content" id="newrelease">
+      <div class="movie-list">
+        <!-- 新片速递动态生成 -->
+      </div>
+    </div>
+    <div class="tab-content" id="comingsoon">
+      <div class="movie-list">
+        <!-- 即将上映动态生成 -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const moviesData = [
+      {
+        title: "荒野机器人 The Wild Robot",
+        rating: 8.4,
+        actors: " 露皮塔·尼永奥 / 佩德罗·帕斯卡 ",
+        year: "2024",
+        type: "剧情, 犯罪",
+        ctype:'newrelease,hot',
+        image: "./images/2.webp", // 替换为实际图片路径
+        comments: [
+          "学飞行那段蒙太奇哭得我快脱水了。也是没想到改编现代童书在好莱坞能这么indie，一众阿西莫夫衬得凡尔纳格外清新。",
+          "不评价电影了，只说评论区各种拿着政治放大镜看电影，离开白左这俩字直接失去语言能力，不会说话了的，你们秀政治理解的样子像个小丑。",
+          "人是漂泊的鸟，爱是宜居的岛。"
+        ]
+      },
+      {
+        title: "某种物质 The Substance",
+        rating: 7.5,
+        actors: "黛米·摩尔 / 玛格丽特·库里 ",
+        year: "2024",
+        type: "剧情",
+        ctype:'newrelease,hot',
+        image: "./images/3.webp", // 替换为实际图片路径
+        comments: [
+          "女主一个健美操主播，会静脉注射会脑脊液穿刺会心内注射会装修…太牛逼了",
+          "格林黑童话之我要上春晚。",
+          "以人性的贪婪和欲望为“食材”，以cult为“佐料”烹饪的邪魅之作。"
+        ]
+      },
+      {
+        title: "逆行人生",
+        rating: 6.6,
+        actors: " 徐峥 / 辛芷蕾 / 王骁 / 贾冰",
+        year: "2024",
+        type: "剧情",
+        ctype:'newrelease',
+        image: "./images/4.webp", // 替换为实际图片路径
+        comments: [
+          "《逆行人生》毫无疑问是今年最现象级的电影之一",
+          "01 《逆行人生》是一部相当拧巴的作品。 它是真诚的，也是虚假的，是绝望的，又是造梦的",
+          "如果电影不拍底层，底层彻底消失在银幕上，做不被看见的群体，难道对普通人就更好吗"
+        ]
+      },
+      {
+        title: "白蛇：浮生",
+        rating: 7.0,
+        actors: "  张喆 / 杨天翔 / 唐小喜 / 张赫",
+        year: "2024",
+        type: "喜剧 / 爱情 / 动画 / 奇幻",
+        ctype:'newrelease,hot',
+        image: "./images/5.webp", // 替换为实际图片路径
+        comments: [
+          "西厢记和博山炉是惊喜！我最爱的狐狸姐姐",
+          "百年修炼竟为了在断桥丢那珠钗，千年轮回只为了在茅屋厮守一世",
+          "《缘起》东方爱情魔幻，《劫起》废土朋克大女主，《浮生》来到小夫妻种田文"
+        ]
+      },
+      {
+        title: "冲撞",
+        rating: 9.0,
+        actors: "  杨梓航 / 张文瀚 ",
+        year: "2021",
+        type: "剧情 / 运动",
+        ctype:'comingsoon,hot',
+        image: "./images/7.webp", // 替换为实际图片路径
+        comments: [
+          "第一次看到东北少年们的成长故事 ",
+          "终于看了部顾老师写的片子。"
+        ]
+      },
+      {
+        title: "哈利波特 卡兹班的囚徒",
+        rating: 9.0,
+        actors: " 丹尼尔·雷德克里夫 / 艾玛·沃森 ",
+        year: "2004",
+        type: "奇幻 冒险",
+        ctype:'comingsoon,hot',
+        image: "./images/6.webp", // 替换为实际图片路径
+        comments: [
+          "整套哈利波特。我最爱这一部。",
+          "我等这一天等了很久了。",
+          "《缘起》东方爱情魔幻，《劫起》废土朋克大女主，《浮生》来到小夫妻种田文"
+        ]
+      },
+      {
+        title: "蓦然回首 ルックバック",
+        rating: 8.7,
+        actors: " 河合优实 / 吉田美月喜 ",
+        year: "2024",
+        type: "剧情 动画",
+        ctype:'comingsoon,hot',
+        image: "./images/8.webp", // 替换为实际图片路径
+        comments: [
+          "人生有时候就是因为第一个观众，才坚持下去的。。",
+          "所有求学者望见那厚厚的草稿本",
+          "那些时光，像一团旧烟火，回忆牵我。"
+        ]
+      },
+      {
+        title: "鸳鸯楼·惊魂",
+        rating: '暂无',
+        actors: " 李梦 / 苏小玎 / 刘迅 / 海陆 ",
+        year: "2024",
+        type: "悬疑 / 惊悚 / 恐怖",
+        ctype:'comingsoon',
+        image: "./images/9.webp", // 替换为实际图片路径
+        comments: [
+          "一个耍大牌一个随地小便，卧龙凤雏啊",
+          "这是公开摆烂了？导演编剧都先遁了？哈哈哈哈",
+        ]
+      },
+      {
+        title: "《肖申克的救赎》",
+        rating: 9.7,
+        actors: "蒂姆·罗宾斯, 摩根·弗里曼",
+        year: "1994",
+        type: "剧情, 犯罪,热门电影，高分电影",
+        ctype:'highscore,hot',
+        image: "./images/1.webp", // 替换为实际图片路径
+        comments: [
+          "这部电影真是太感人了，强烈推荐！",
+          "每个人都能从中找到自己的影子。",
+          "经典中的经典，不容错过。"
+        ]
+      },
+      {
+        title: "霸王别姬",
+        rating: 9.6,
+        actors: "张国荣 / 张丰毅 / 巩俐 / 葛优 / 英达 ",
+        year: "1993",
+        type: "剧情 / 爱情 / 同性",
+        ctype:'highscore,hot',
+        image: "./images/10.webp", // 替换为实际图片路径
+        comments: [
+          "不疯魔，不成活",
+          "他竟当面一语点破：虞姬是真虞姬，霸王是假霸王。",
+          "陈凯歌可以靠它吃两辈子饭了"
+        ]
+      },
+      {
+        title: "阿甘正传 Forrest Gump",
+        rating: 9.5,
+        actors: " 汤姆·汉克斯 / 罗宾·怀特 / 加里·辛尼斯",
+        year: "1994",
+        type: "剧情 / 爱情",
+        ctype:'highscore,hot',
+        image: "./images/11.webp", // 替换为实际图片路径
+        comments: [
+          "每年看一遍，每年哭一遍",
+          "妈妈说，生活就像一盒巧克力",
+          "羡慕珍妮，不管她多么叛逆、落魄、堕落，永远有阿甘在等她回来"
+        ]
+      },
+      {
+        title: "泰坦尼克号 Titanic",
+        rating: 9.5,
+        actors: "莱昂纳多·迪卡普里奥 / 凯特·温斯莱特 / 比利·赞恩",
+        year: "1997",
+        type: "剧情 / 爱情 / 灾难",
+        ctype:'highscore',
+        image: "./images/12.webp", // 替换为实际图片路径
+        comments: [
+          "将永远是我在电影院所看过次数最多、最感动、也是最好的电影",
+          "“我甚至连一张他的画像都没有，但他永远活在我心中。",
+          "那一瞬间，仿佛听见一首镇魂曲在响彻"
+        ]
+      },
+    ];
+
+    function renderMovies(container, section) {
+      console.log('section',section)
+      container.innerHTML = '';
+      moviesData.filter(movie => movie.ctype.includes(section)).slice(0, 10).forEach(movie => {
+        const item = document.createElement("div");
+        item.className = "movie-item";
+        item.innerHTML = `
+          <img src="${movie.image}" alt="电影海报">
+          <div class="movie-item-content">
+            <h3 class="movie-item-title">${movie.title}</h3>
+            <div class="movie-item-meta">
+              <span>${movie.rating} 分</span>
+              <span>${movie.year} 年</span>
+            </div>
+          </div>
+          <div class="movie-item-comments">
+            <p>热门评论：</p>
+            <ul class="comments-con">
+              ${movie.comments.map(comment => `<li>${comment}</li>`).join('')}
+            </ul>
+          </div>`;
+        container.appendChild(item);
+      });
+    }
+
+    // 轮播图
+    function initCarousel() {
+      const carouselInner = document.querySelector('.carousel-inner');
+      const carouselPrev = document.querySelector('.carousel-prev');
+      const carouselNext = document.querySelector('.carousel-next');
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentSlide = 0;
+      const slideWidth = slides[0].clientWidth;
+      const totalSlides = slides.length;
+
+      function moveToSlide(index) {
+        currentSlide = index;
+        carouselInner.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          moveToSlide(currentSlide + 1);
+        } else {
+          moveToSlide(0);
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlide > 0) {
+          moveToSlide(currentSlide - 1);
+        } else {
+          moveToSlide(totalSlides - 1);
+        }
+      }
+
+      carouselNext.addEventListener('click', nextSlide);
+      carouselPrev.addEventListener('click', prevSlide);
+
+      moveToSlide(0);
+    }
+
+    function initTabs() {
+
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const tabId = this.getAttribute('data-tab');
+          tabLinks.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+          tabContents.forEach(content => content.classList.remove('active'));
+          document.getElementById(tabId).classList.add('active');
+          const section = tabId; // 获取当前激活的tab对应的section
+          renderMovies(document.querySelector(`#${tabId} .movie-list`), section);
+        });
+      });
+
+      document.querySelector('.tab-link.active').click(); // 初始化第一个标签
+    }
+
+    window.onload = function() {
+      initCarousel();
+      initTabs();
+      renderMovies(document.querySelector('#hot .movie-list'), 'hot');
+      // renderMovies(document.querySelector('#highscore .movie-list'), '高分电影');
+      // renderMovies(document.querySelector('#newrelease .movie-list'), '新片速递');
+      // renderMovies(document.querySelector('#comingsoon .movie-list'), '即将上映');
+    };
+  </script>
+</body>
+</html>

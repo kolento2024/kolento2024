@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Tables</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.preloader{position:fixed;left:0;top:0;bottom:0;right:0;z-index:10000;display:flex;justify-content:center;align-items:center;padding:20px;background:#fff;transition:.3s all ease}.preloader.loaded{opacity:0;visibility:hidden}.preloader-body{text-align:center}.preloader-body p{position:relative;right:-8px;top:10px}#circular3dG{position:relative;width:75px;height:75px;margin:auto}.circular3dG{position:absolute;background-color:#764ebe;width:21px;height:21px;border-radius:23px;-o-border-radius:23px;-ms-border-radius:23px;-webkit-border-radius:23px;-moz-border-radius:23px;animation-name:bounce_circular3dG;-o-animation-name:bounce_circular3dG;-ms-animation-name:bounce_circular3dG;-webkit-animation-name:bounce_circular3dG;-moz-animation-name:bounce_circular3dG;animation-duration:932ms;-o-animation-duration:932ms;-ms-animation-duration:932ms;-webkit-animation-duration:932ms;-moz-animation-duration:932ms;animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-direction:normal;-o-animation-direction:normal;-ms-animation-direction:normal;-webkit-animation-direction:normal;-moz-animation-direction:normal}#circular3d_1G{left:30px;top:5px;animation-delay:.3495s;-o-animation-delay:.3495s;-ms-animation-delay:.3495s;-webkit-animation-delay:.3495s;-moz-animation-delay:.3495s}#circular3d_2G{left:46px;top:18px;animation-delay:466ms;-o-animation-delay:466ms;-ms-animation-delay:466ms;-webkit-animation-delay:466ms;-moz-animation-delay:466ms}#circular3d_3G{left:55px;top:34px;animation-delay:.5825s;-o-animation-delay:.5825s;-ms-animation-delay:.5825s;-webkit-animation-delay:.5825s;-moz-animation-delay:.5825s}#circular3d_4G{left:51px;top:50px;animation-delay:699ms;-o-animation-delay:699ms;-ms-animation-delay:699ms;-webkit-animation-delay:699ms;-moz-animation-delay:699ms}#circular3d_5G{left:31px;top:55px;animation-delay:.8155s;-o-animation-delay:.8155s;-ms-animation-delay:.8155s;-webkit-animation-delay:.8155s;-moz-animation-delay:.8155s}#circular3d_6G{left:6px;top:36px;animation-delay:932ms;-o-animation-delay:932ms;-ms-animation-delay:932ms;-webkit-animation-delay:932ms;-moz-animation-delay:932ms}#circular3d_7G{left:0;top:10px;animation-delay:1.0485s;-o-animation-delay:1.0485s;-ms-animation-delay:1.0485s;-webkit-animation-delay:1.0485s;-moz-animation-delay:1.0485s}#circular3d_8G{left:13px;top:0;animation-delay:1.165s;-o-animation-delay:1.165s;-ms-animation-delay:1.165s;-webkit-animation-delay:1.165s;-moz-animation-delay:1.165s}@keyframes bounce_circular3dG{0%{transform:scale(1)}100%{transform:scale(.3)}}@-o-keyframes bounce_circular3dG{0%{-o-transform:scale(1)}100%{-o-transform:scale(.3)}}@-ms-keyframes bounce_circular3dG{0%{-ms-transform:scale(1)}100%{-ms-transform:scale(.3)}}@-webkit-keyframes bounce_circular3dG{0%{-webkit-transform:scale(1)}100%{-webkit-transform:scale(.3)}}@-moz-keyframes bounce_circular3dG{0%{-moz-transform:scale(1)}100%{-moz-transform:scale(.3)}} .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div id="circular3dG">
+          <div class="circular3dG" id="circular3d_1G"></div>
+          <div class="circular3dG" id="circular3d_2G"></div>
+          <div class="circular3dG" id="circular3d_3G"></div>
+          <div class="circular3dG" id="circular3d_4G"></div>
+          <div class="circular3dG" id="circular3d_5G"></div>
+          <div class="circular3dG" id="circular3d_6G"></div>
+          <div class="circular3dG" id="circular3d_7G"></div>
+          <div class="circular3dG" id="circular3d_8G"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xg-stick-up-offset="46px" data-xxl-stick-up-offset="46px">
+            <div class="rd-navbar-top-panel-wrap">
+              <div class="rd-navbar-top-panel">
+                <div class="left-side">
+                  <!-- Contact Info-->
+                  <address class="contact-info text-left">
+                    <div class="d-inline-block"><a class="unit align-items-xl-center flex-row unit-spacing-xxs" href="#"><span class="unit-left"><span class="icon icon-sm icon-primary icon-circle mdi mdi-map-marker text-bermuda"></span></span><span class="unit-body"><span class="text-gray-lighter">2130 Fulton Street, San Diego, CA 94117-1080 USA</span></span></a></div>
+                    <div class="d-inline-block">
+                      <div class="unit align-items-center flex-row unit-spacing-xxs">
+                        <div class="unit-left">
+                          <div class="icon icon-sm icon-primary icon-circle mdi mdi-calendar-clock text-bermuda"></div>
+                        </div>
+                        <div class="unit-body">
+                          <div class="text-gray-lighter">Mon–Sun: 9:00am–9:00pm</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-inline-block"><a class="unit align-items-center flex-row unit-spacing-xxs" href="tel:#"><span class="unit-left"><span class="icon icon-sm icon-primary icon-circle mdi mdi-phone text-bermuda"></span></span><span class="unit-body"><span class="text-gray-lighter">1-800-1234-567</span></span></a></div>
+                  </address>
+                </div>
+                <div class="right-side">
+                  <ul class="list-inline list-inline-2 list-primary">
+                    <li><a class="icon icon-xs icon-circle fa fa-facebook text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-twitter text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-pinterest-p text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-vimeo text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-google text-gray-lighter" href="#"></a></li>
+                    <li><a class="icon icon-xs icon-circle fa fa-rss text-gray-lighter" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-left-side">
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+                  </div>
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle-search-fixed d-lg-none d-tablet" data-rd-navbar-toggle=".rd-navbar-search-wrap-fixed"></button>
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-collapse-toggle d-xl-none d-lg-inline-block" data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></button>
+                </div>
+              </div>
+              <div class="rd-navbar-right-side">
+                <div class="rd-navbar-nav-wrap d-inline-block">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-variant-2.html">Home Variant 2</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-variant-3.html">Home Variant 3</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="entertainment.html">Services</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shops.html">Shops</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="food.html">Food</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="entertainment.html">Entertainment</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="parking.html">Parking</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gift-cards.html">Gift Cards</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="events.html">Events</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="events.html">All Events</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="event-single.html">Event Page</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="sales.html">Sales</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="blog-classic.html">Blog</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-classic.html">Blog Classic</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-grid.html">Blog Grid</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-masonry.html">Blog Masonry</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog Post</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Pages</a>
+                      <ul class="rd-menu rd-navbar-megamenu">
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid.html">Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503.html">503 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maintenance.html">Maintenance</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sitemap.html">Site map</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy Policy</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="directions.html">Directions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sale-single.html">Sale Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="shop-single.html">Shop Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="restaurant-single.html">Restaurant Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid.html">Gallery Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid-without-padding.html">Gallery Grid without Padding</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-cobbles.html">Gallery Cobbles</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-masonry.html">Gallery Masonry</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--RD Navbar Search-->
+                <div class="rd-navbar-search-wrap-fixed d-inline-block">
+                  <div class="rd-navbar-search-wrap">
+                    <div class="rd-navbar-search"><a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                      <form class="rd-search rd-navbar-search-custom" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                        <div class="form-group">
+                          <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                          <input class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                          <button type="submit"><span class="icon icon-xs fa fa-search"></span></button>
+                        </div>
+                        <div class="rd-search-results-live d-none d-xl-block" id="rd-search-results-live"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle-search d-none d-lg-inline-block veil-tablet" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs-->
+      <section class="section-height-800 breadcrumb-modern parallax-container context-dark bg-gray-darkest d-none d-lg-block" data-parallax-img="images/backgrounds/background-01-1920-900.jpg">
+        <div class="parallax-content">
+          <div class="bg-overlay-darker">
+            <div class="container-wide section-34 section-md-60 section-lg-top-130 section-lg-bottom-155">
+              <div class="d-none d-lg-block">
+                <div class="h1 breadcrumbs-custom-title">Tables</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-34 bg-selago">
+        <div class="container">
+          <ul class="list-inline list-inline-12 list-inline-icon breadcrumbs-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li class="active">Tables</li>
+          </ul>
+        </div>
+      </section>
+      <div class="page-content section-60 section-md-120">
+        <!-- Table Styles-->
+        <section>
+          <div class="container">
+            <div class="row justify-content-sm-center">
+              <div class="col-sm-10 col-lg-6">
+                <h3>Table Styles</h3>
+                <p>Tables have always been perfect for displaying facts and numbers. Now you can benefit from using them on your website.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container offset-top-90 offset-xl-top-127">
+            <h5>Hover Row Table</h5>
+            <div class="offset-top-25">
+              <!-- Classic Responsive Table-->
+              <div class="table-responsive">
+                <table class="table table-custom table-hover table-custom-top-border-none table-custom-body-top-border-gray">
+                  <tr>
+                    <th class="text-center text-gray text-uppercase">Column 1</th>
+                    <th class="text-center text-gray text-uppercase">Column 2</th>
+                    <th class="text-center text-gray text-uppercase">Column 3</th>
+                    <th class="text-center text-gray text-uppercase">Column 4</th>
+                  </tr>
+                  <tr>
+                    <td>Item #1</td>
+                    <td>Description</td>
+                    <td>Subtotal:</td>
+                    <td>$1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #2</td>
+                    <td>Description</td>
+                    <td>Discount:</td>
+                    <td>$2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #3</td>
+                    <td>Description</td>
+                    <td>Shipping:</td>
+                    <td>$3.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #4</td>
+                    <td>Description</td>
+                    <td>Tax:</td>
+                    <td>$5.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-gray">All Items</td>
+                    <td class="text-gray">Description</td>
+                    <td class="text-gray">Your Total:</td>
+                    <td class="text-gray">$11.00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="container offset-top-90 offset-xl-top-127">
+            <h5>Color Header</h5>
+            <div class="offset-top-40">
+              <!-- Classic Responsive Table-->
+              <div class="table-responsive">
+                <table class="table table-custom table-custom-header-primary table-striped-even">
+                  <tr>
+                    <th class="text-center text-white text-uppercase">Column 1</th>
+                    <th class="text-center text-white text-uppercase">Column 2</th>
+                    <th class="text-center text-white text-uppercase">Column 3</th>
+                    <th class="text-center text-white text-uppercase">Column 4</th>
+                  </tr>
+                  <tr>
+                    <td>Item #1</td>
+                    <td>Description</td>
+                    <td>Subtotal:</td>
+                    <td>$1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #2</td>
+                    <td>Description</td>
+                    <td>Discount:</td>
+                    <td>$2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #3</td>
+                    <td>Description</td>
+                    <td>Shipping:</td>
+                    <td>$3.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #4</td>
+                    <td>Description</td>
+                    <td>Tax:</td>
+                    <td>$5.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-gray">All Items</td>
+                    <td class="text-gray">Description</td>
+                    <td class="text-gray">Your Total:</td>
+                    <td class="text-gray">$11.00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="container offset-top-90 offset-xl-top-127">
+            <h5>Bordered Table</h5>
+            <div class="offset-top-40">
+              <!-- Classic Responsive Table-->
+              <div class="table-responsive">
+                <table class="table table-bordered table-custom table-custom-left table-custom-header-bottom-border-gray">
+                  <tr>
+                    <th class="text-gray text-uppercase">Column 1</th>
+                    <th class="text-gray text-uppercase">Column 2</th>
+                    <th class="text-gray text-uppercase">Column 3</th>
+                    <th class="text-gray text-uppercase">Column 4</th>
+                  </tr>
+                  <tr>
+                    <td>Item #1</td>
+                    <td>Description</td>
+                    <td>Subtotal:</td>
+                    <td>$1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #2</td>
+                    <td>Description</td>
+                    <td>Discount:</td>
+                    <td>$2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #3</td>
+                    <td>Description</td>
+                    <td>Shipping:</td>
+                    <td>$3.00</td>
+                  </tr>
+                  <tr>
+                    <td>Item #4</td>
+                    <td>Description</td>
+                    <td>Tax:</td>
+                    <td>$5.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-gray">All Items</td>
+                    <td class="text-gray">Description</td>
+                    <td class="text-gray">Your Total:</td>
+                    <td class="text-gray">$11.00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Page Footer-->
+      <footer class="page-footer bg-shark section-80 section-lg-top-120 section-lg-bottom-60">
+        <div class="container-wide">
+          <div class="row justify-content-sm-center inset-xxl-left-55 row-40">
+            <div class="col-sm-6 col-md-5 col-xl-4 col-xxl-4 text-xxl-center">
+              <p class="text-gray-lighter text-left inset-xxl-right-140">Audrey Mail is a four-story shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-75">
+                <li><a class="text-bermuda" href="shops.html">Shops</a></li>
+                <li><a class="text-bermuda" href="food.html">Food</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Entertainment</a></li>
+                <li><a class="text-bermuda" href="parking.html">Parking</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-100">
+                <li><a class="text-bermuda" href="gift-cards.html">Mall Gift Cards</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">About Us</a></li>
+                <li><a class="text-bermuda" href="directions.html">Directions</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Services</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-center">
+              <!-- List Marked-->
+              <ul class="list list-marked list-marked-white text-left inset-xxl-left-140">
+                <li><a class="text-bermuda" href="events.html">Events</a></li>
+                <li><a class="text-bermuda" href="sales.html">Sales</a></li>
+                <li><a class="text-bermuda" href="blog-classic.html">Latest News</a></li>
+                <li><a class="text-bermuda" href="contacts.html">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-sm-center align-items-sm-center justify-content-xxl-between offset-xl-top-75 row-40 offset-top-50">
+            <div class="col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-xxl-center text-md-left">
+              <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 text-xxl-center">
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a class="text-gray-light" href="privacy-policy.html">Privacy Policy</a> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home Variant 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.preloader{position:fixed;left:0;top:0;bottom:0;right:0;z-index:10000;display:flex;justify-content:center;align-items:center;padding:20px;background:#fff;transition:.3s all ease}.preloader.loaded{opacity:0;visibility:hidden}.preloader-body{text-align:center}.preloader-body p{position:relative;right:-8px;top:10px}#circular3dG{position:relative;width:75px;height:75px;margin:auto}.circular3dG{position:absolute;background-color:#764ebe;width:21px;height:21px;border-radius:23px;-o-border-radius:23px;-ms-border-radius:23px;-webkit-border-radius:23px;-moz-border-radius:23px;animation-name:bounce_circular3dG;-o-animation-name:bounce_circular3dG;-ms-animation-name:bounce_circular3dG;-webkit-animation-name:bounce_circular3dG;-moz-animation-name:bounce_circular3dG;animation-duration:932ms;-o-animation-duration:932ms;-ms-animation-duration:932ms;-webkit-animation-duration:932ms;-moz-animation-duration:932ms;animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-direction:normal;-o-animation-direction:normal;-ms-animation-direction:normal;-webkit-animation-direction:normal;-moz-animation-direction:normal}#circular3d_1G{left:30px;top:5px;animation-delay:.3495s;-o-animation-delay:.3495s;-ms-animation-delay:.3495s;-webkit-animation-delay:.3495s;-moz-animation-delay:.3495s}#circular3d_2G{left:46px;top:18px;animation-delay:466ms;-o-animation-delay:466ms;-ms-animation-delay:466ms;-webkit-animation-delay:466ms;-moz-animation-delay:466ms}#circular3d_3G{left:55px;top:34px;animation-delay:.5825s;-o-animation-delay:.5825s;-ms-animation-delay:.5825s;-webkit-animation-delay:.5825s;-moz-animation-delay:.5825s}#circular3d_4G{left:51px;top:50px;animation-delay:699ms;-o-animation-delay:699ms;-ms-animation-delay:699ms;-webkit-animation-delay:699ms;-moz-animation-delay:699ms}#circular3d_5G{left:31px;top:55px;animation-delay:.8155s;-o-animation-delay:.8155s;-ms-animation-delay:.8155s;-webkit-animation-delay:.8155s;-moz-animation-delay:.8155s}#circular3d_6G{left:6px;top:36px;animation-delay:932ms;-o-animation-delay:932ms;-ms-animation-delay:932ms;-webkit-animation-delay:932ms;-moz-animation-delay:932ms}#circular3d_7G{left:0;top:10px;animation-delay:1.0485s;-o-animation-delay:1.0485s;-ms-animation-delay:1.0485s;-webkit-animation-delay:1.0485s;-moz-animation-delay:1.0485s}#circular3d_8G{left:13px;top:0;animation-delay:1.165s;-o-animation-delay:1.165s;-ms-animation-delay:1.165s;-webkit-animation-delay:1.165s;-moz-animation-delay:1.165s}@keyframes bounce_circular3dG{0%{transform:scale(1)}100%{transform:scale(.3)}}@-o-keyframes bounce_circular3dG{0%{-o-transform:scale(1)}100%{-o-transform:scale(.3)}}@-ms-keyframes bounce_circular3dG{0%{-ms-transform:scale(1)}100%{-ms-transform:scale(.3)}}@-webkit-keyframes bounce_circular3dG{0%{-webkit-transform:scale(1)}100%{-webkit-transform:scale(.3)}}@-moz-keyframes bounce_circular3dG{0%{-moz-transform:scale(1)}100%{-moz-transform:scale(.3)}} .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div id="circular3dG">
+          <div class="circular3dG" id="circular3d_1G"></div>
+          <div class="circular3dG" id="circular3d_2G"></div>
+          <div class="circular3dG" id="circular3d_3G"></div>
+          <div class="circular3dG" id="circular3d_4G"></div>
+          <div class="circular3dG" id="circular3d_5G"></div>
+          <div class="circular3dG" id="circular3d_6G"></div>
+          <div class="circular3dG" id="circular3d_7G"></div>
+          <div class="circular3dG" id="circular3d_8G"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="1px" data-xl-stick-up-offset="1px" data-xxl-stick-up-offset="1px">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-left-side">
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+                  </div>
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle-search-fixed d-lg-none d-tablet" data-rd-navbar-toggle=".rd-navbar-search-wrap-fixed"></button>
+                </div>
+              </div>
+              <div class="rd-navbar-right-side">
+                <div class="rd-navbar-nav-wrap d-inline-block">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-variant-2.html">Home Variant 2</a>
+                        </li>
+                        <li class="rd-dropdown-item active"><a class="rd-dropdown-link" href="index-variant-3.html">Home Variant 3</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="entertainment.html">Services</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shops.html">Shops</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="food.html">Food</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="entertainment.html">Entertainment</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="parking.html">Parking</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gift-cards.html">Gift Cards</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="events.html">Events</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="events.html">All Events</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="event-single.html">Event Page</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="sales.html">Sales</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="blog-classic.html">Blog</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-classic.html">Blog Classic</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-grid.html">Blog Grid</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-masonry.html">Blog Masonry</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog Post</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
+                      <ul class="rd-menu rd-navbar-megamenu">
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid.html">Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503.html">503 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maintenance.html">Maintenance</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sitemap.html">Site map</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy Policy</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="directions.html">Directions</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="sale-single.html">Sale Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="shop-single.html">Shop Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="restaurant-single.html">Restaurant Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid.html">Gallery Grid</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-grid-without-padding.html">Gallery Grid without Padding</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-cobbles.html">Gallery Cobbles</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-masonry.html">Gallery Masonry</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--RD Navbar Search-->
+                <div class="rd-navbar-search-wrap-fixed d-inline-block">
+                  <div class="rd-navbar-search-wrap" id="rd-navbar-search-wrap">
+                    <div class="rd-navbar-search"><a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                      <form class="rd-search rd-navbar-search-custom" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                        <div class="form-group">
+                          <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                          <input class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                          <button type="submit"><span class="icon icon-xs fa fa-search"></span></button>
+                        </div>
+                        <div class="rd-search-results-live d-none d-xl-block" id="rd-search-results-live"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <button class="rd-navbar-toggle-search d-none d-lg-inline-block veil-tablet" data-custom-toggle="rd-navbar-search-wrap" data-custom-toggle-disable-on-blur="true"></button>
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-info-toggle d-inline-block" data-rd-navbar-toggle=".rd-navbar-search-wrap-info"></button>
+                <div class="rd-navbar-search-wrap-info">
+                  <!-- Contact Info-->
+                  <address class="contact-info text-left p">
+                    <div class="d-block">
+                      <!-- Unit-->
+                      <div class="unit align-items-center align-items-center flex-row unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-sm icon-circle mdi mdi-map-marker text-white bg-bermuda"></span></div>
+                        <div class="unit-body"><a class="text-gray" href="contacts.html">2130 Fulton Street, San Diego, <br class="d-none d-lg-inline-block"> CA 94117-1080 USA</a></div>
+                      </div>
+                    </div>
+                    <div class="d-block">
+                      <!-- Unit-->
+                      <div class="unit align-items-center align-items-center flex-row unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-sm icon-circle mdi mdi-calendar-clock text-white bg-bermuda"></span></div>
+                        <div class="unit-body">
+                          <p class="text-gray">Monday–Sunday: <br> 9:00am–9:00pm</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-block">
+                      <!-- Unit-->
+                      <div class="unit align-items-center align-items-center flex-row unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-sm icon-circle mdi mdi-phone text-white bg-bermuda"></span></div>
+                        <div class="unit-body"><a class="text-gray" href="tel:#">1-800-1234-567</a><br><a class="text-gray" href="tel:#">1-800-6547-958</a></div>
+                      </div>
+                    </div>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="swiper-container-wrap swiper-slider-variant-3">
+        <!-- Swiper-->
+        <div class="swiper-container swiper-slider" data-height="" data-min-height="300px" data-simulate-touch="false" data-autoplay="4200" data-direction="vertical">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-slide-bg="images/backgrounds/background-04-1920-1077.jpg">
+              <div class="swiper-slide-caption">
+                <div class="inset-xl-left-35 inset-xxl-left-125">
+                  <div class="container-wide container-wide-custom">
+                    <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
+                      <div class="col-md-10 col-xl-12 col-xxl-10">
+                        <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Season Sale</div>
+                        <div class="d-none d-xl-inline-block offset-top-25 offset-md-top-30">
+                          <hr class="divider divider-mod divider-58 bg-default">
+                        </div>
+                        <div class="d-inline-block text-top offset-top-10 offset-md-top-15 inset-left-10">
+                          <h4 class="text-white">UP TO</h4>
+                        </div>
+                        <div class="d-inline-block text-top inset-left-10">
+                          <h1>70% OFF</h1>
+                        </div>
+                        <div class="offset-top-15 offset-lg-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/backgrounds/background-05-1920-710.jpg">
+              <div class="swiper-slide-caption">
+                <div class="inset-xl-left-35 inset-xxl-left-125">
+                  <div class="container-wide container-wide-custom">
+                    <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
+                      <div class="col-md-10 col-xl-12 col-xxl-10">
+                        <h4 class="text-uppercase text-white">New Collection</h4>
+                        <h1 class="text-uppercase text-spacing-100 text-height-1">always</h1>
+                        <div class="d-none d-xl-inline-block offset-top-45">
+                          <hr class="divider divider-xl bg-default">
+                        </div>
+                        <div class="d-inline-block text-top inset-xl-left-35">
+                          <div class="text-big-84 font-monospace font-italic text-white text-spacing-inverse-20">in</div>
+                        </div>
+                        <div class="d-inline-block text-top inset-left-15">
+                          <h1 class="text-uppercase text-spacing-100 text-height-1">style</h1>
+                        </div>
+                        <div class="offset-top-15 offset-lg-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/backgrounds/background-08-1920-1025.jpg">
+              <div class="swiper-slide-caption">
+                <div class="inset-xl-left-35 inset-xxl-left-125">
+                  <div class="container-wide container-wide-custom">
+                    <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
+                      <div class="col-md-10 col-xl-12 col-xxl-10">
+                        <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Hats & Accessories</div>
+                        <h1>30% OFF</h1>
+                        <div class="d-none d-xl-inline-block offset-top-25">
+                          <hr class="divider divider-xl bg-default">
+                        </div>
+                        <div class="d-inline-block text-top offset-xl-top-10 inset-left-10">
+                          <h4>EVERYTHING</h4>
+                        </div>
+                        <div class="offset-top-15 offset-lg-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-wide container-wide-custom">
+            <div class="inset-xl-left-45 inset-xxl-left-85">
+              <!-- Swiper Pagination-->
+              <div class="swiper-pagination swiper-pagination-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-aside-right">
+          <div class="row no-gutters justify-content-sm-center row-xl-column bg-shark">
+            <div class="col-md-6 col-xl-12">
+              <!-- Thumbnail Terry-->
+              <figure class="thumbnail-terry thumbnail-terry-centered thumbnail-terry-banner"><a href="#"><img width="960" height="660" src="images/pages/gift-cards-09-640x300.jpg" alt=""></a>
+                <figcaption class="text-lg-right inset-lg-right-50 inset-xl-right-60">
+                  <h3 class="thumbnail-terry-title text-uppercase">accessories</h3>
+                  <div class="offset-top-0">
+                    <div class="d-inline-block h3-variant-2 thumbnail-terry-title font-weight-bold font-monospace font-italic">Big</div>
+                    <div class="d-inline-block h3-variant-2 thumbnail-terry-title font-weight-bold font-accent text-uppercase text-height-1">sale</div>
+                  </div><a class="btn btn-bermuda offset-top-10 offset-lg-top-0" href="shops.html">shop now</a>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6 col-xl-12">
+              <!-- Thumbnail Terry-->
+              <figure class="thumbnail-terry thumbnail-terry-centered thumbnail-terry-gradient-none thumbnail-terry-banner"><a href="#"><img width="960" height="660" src="images/pages/gift-cards-10-640x300.jpg" alt=""></a>
+                <figcaption class="text-lg-left">
+                  <div class="h3-variant-2 thumbnail-terry-title font-weight-bold font-monospace font-italic">Lingerie</div>
+                  <div class="offset-top-0">
+                    <div class="d-inline-block h3-variant-2 thumbnail-terry-title font-weight-bold font-accent text-uppercase">70%</div>
+                    <div class="d-inline-block h3-variant-2 thumbnail-terry-title font-weight-bold font-accent text-uppercase">Off</div>
+                  </div><a class="btn btn-bermuda offset-top-10 offset-lg-top-0" href="shops.html">shop now</a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Content-->
+      <main class="page-content">
+        <!-- Products-->
+        <section class="section-80 section-md-0">
+          <!-- List Inline-->
+          <div class="box-offer-wrap list-inline-dashed-lg">
+            <div class="section-md-80 box-offer"><a class="d-inline-block d-md-block" href="directions.html">
+                <svg x="0px" y="0px" width="66px" height="65px" viewbox="0 0 53.513 54">
+                  <g>
+                    <path fill="none" d="M32,33.507c0,1.461,0.314,2.857,0.934,4.149c2.618,6.001,7.088,11.672,8.856,13.796                c1.747-2.13,6.154-7.797,8.758-13.763c0.645-1.35,0.965-2.746,0.965-4.182c0-5.341-4.377-9.687-9.756-9.687                C36.377,23.82,32,28.166,32,33.507z M47.462,33.381c0,3.146-2.56,5.706-5.706,5.706s-5.706-2.56-5.706-5.706                s2.56-5.706,5.706-5.706S47.462,30.235,47.462,33.381z"></path>
+                    <circle fill="none" cx="10" cy="21" r="2"></circle>
+                    <circle fill="none" cx="40" cy="12" r="2"></circle>
+                    <path fill="none" d="M38.05,33.381c0,2.043,1.663,3.706,3.706,3.706c2.044,0,3.706-1.663,3.706-3.706                c0-2.043-1.662-3.706-3.706-3.706C39.713,29.675,38.05,31.338,38.05,33.381z"></path>
+                    <path fill="none" d="M24.581,7.446L13,2.101L2,7.178v33.799l10.582-4.865c0.267-0.123,0.573-0.122,0.838,0.001l11.583,5.366                l6.191-2.821c-0.025-0.056-0.053-0.112-0.078-0.169C30.381,36.957,30,35.27,30,33.507c0-6.444,5.274-11.687,11.757-11.687                c2.295,0,4.432,0.667,6.243,1.802V7.178L37,2.101L25.419,7.446C25.153,7.568,24.846,7.569,24.581,7.446z M10,25                c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S12.206,25,10,25z M17.866,17.818c-1.484-0.168-2.576,0.139-2.585,0.142                c-0.092,0.027-0.186,0.039-0.278,0.039c-0.433,0-0.833-0.282-0.96-0.718c-0.156-0.528,0.143-1.081,0.671-1.239                c0.119-0.036,1.48-0.425,3.378-0.211c0.549,0.062,0.943,0.558,0.881,1.106C18.91,17.486,18.408,17.879,17.866,17.818z                M24.248,21.385c-0.197,0.255-0.493,0.389-0.792,0.389c-0.214,0-0.429-0.068-0.611-0.209c-0.596-0.46-1.043-1.03-1.474-1.58                c-0.206-0.263-0.414-0.529-0.643-0.784c-0.369-0.411-0.335-1.043,0.076-1.412c0.411-0.37,1.043-0.336,1.412,0.076                c0.259,0.288,0.496,0.589,0.729,0.886c0.372,0.475,0.724,0.923,1.122,1.231C24.505,20.32,24.585,20.948,24.248,21.385z M40,8                c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4S37.794,8,40,8z M33,17.441c1.125-0.801,1.756-1.485,2.032-1.822                c0.351-0.426,0.981-0.488,1.408-0.138c0.427,0.351,0.489,0.981,0.138,1.408c-0.339,0.413-1.105,1.246-2.418,2.18                c-0.176,0.126-0.378,0.186-0.579,0.186c-0.312,0-0.621-0.146-0.815-0.42C32.445,18.385,32.55,17.761,33,17.441z M27.022,20.249                c0.209-0.054,0.429-0.12,0.661-0.197c0.699-0.233,1.375-0.491,2.01-0.769c0.506-0.221,1.096,0.01,1.317,0.516                c0.221,0.506-0.01,1.096-0.516,1.317c-0.691,0.301-1.423,0.581-2.178,0.833c-0.276,0.092-0.539,0.17-0.789,0.236                c-0.085,0.022-0.17,0.032-0.253,0.032c-0.445,0-0.85-0.298-0.968-0.748C26.167,20.935,26.487,20.389,27.022,20.249z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M25,5.436L13.419,0.092c-0.266-0.123-0.572-0.123-0.838-0.001l-12,5.539C0.227,5.793,0,6.148,0,6.538                v36.001c0,0.341,0.173,0.658,0.461,0.841c0.287,0.184,0.647,0.209,0.957,0.067l11.581-5.325l11.58,5.365                c0.134,0.062,0.277,0.093,0.421,0.093c0.141,0,0.282-0.03,0.414-0.09l6.637-3.024c3.506,6.997,8.756,12.928,8.998,13.2                c0.189,0.211,0.461,0.333,0.744,0.333h0.008c0.286-0.003,0.557-0.125,0.746-0.339c0.26-0.297,6.422-7.351,9.819-15.14                c0.761-1.589,1.147-3.275,1.147-5.013c0-3.269-1.361-6.225-3.545-8.348C49.977,25.105,50,25.056,50,25V6.538                c0-0.39-0.227-0.745-0.581-0.908l-12-5.539c-0.266-0.122-0.572-0.122-0.838,0L25,5.436z M51.513,33.507                c0,1.436-0.32,2.832-0.965,4.182c-2.604,5.966-7.011,11.633-8.758,13.763c-1.768-2.124-6.238-7.795-8.856-13.796                C32.314,36.364,32,34.968,32,33.507c0-5.341,4.377-9.687,9.757-9.687C47.136,23.82,51.513,28.166,51.513,33.507z M48,7.178v16.444                c-1.811-1.135-3.948-1.802-6.243-1.802C35.274,21.82,30,27.063,30,33.507c0,1.763,0.381,3.45,1.116,4.982                c0.025,0.057,0.053,0.113,0.078,0.169l-6.191,2.821L13.42,36.113c-0.265-0.123-0.571-0.124-0.838-0.001L2,40.977V7.178l11-5.077                l11.581,5.345c0.265,0.123,0.572,0.122,0.838,0L37,2.101L48,7.178z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M36.05,33.381c0,3.146,2.56,5.706,5.706,5.706s5.706-2.56,5.706-5.706s-2.56-5.706-5.706-5.706                S36.05,30.235,36.05,33.381z M45.462,33.381c0,2.043-1.662,3.706-3.706,3.706c-2.043,0-3.706-1.663-3.706-3.706                c0-2.043,1.663-3.706,3.706-3.706C43.8,29.675,45.462,31.338,45.462,33.381z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M22.945,18.751c-0.233-0.297-0.47-0.598-0.729-0.886c-0.369-0.412-1.001-0.446-1.412-0.076                c-0.411,0.369-0.445,1.001-0.076,1.412c0.229,0.255,0.437,0.521,0.643,0.784c0.431,0.55,0.878,1.12,1.474,1.58                c0.182,0.141,0.397,0.209,0.611,0.209c0.299,0,0.595-0.134,0.792-0.389c0.337-0.437,0.257-1.065-0.181-1.403                C23.669,19.674,23.317,19.226,22.945,18.751z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M18.092,15.831c-1.898-0.214-3.259,0.175-3.378,0.211c-0.528,0.158-0.827,0.711-0.671,1.239                c0.127,0.436,0.527,0.718,0.96,0.718c0.092,0,0.186-0.012,0.278-0.039c0.009-0.003,1.101-0.31,2.585-0.142                c0.542,0.062,1.044-0.332,1.107-0.881C19.035,16.389,18.641,15.892,18.092,15.831z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M33.581,19.255c0.201,0,0.403-0.06,0.579-0.186c1.313-0.934,2.079-1.767,2.418-2.18                c0.351-0.427,0.289-1.057-0.138-1.408c-0.427-0.35-1.057-0.288-1.408,0.138c-0.276,0.337-0.907,1.021-2.032,1.822                c-0.45,0.32-0.555,0.944-0.234,1.394C32.961,19.109,33.27,19.255,33.581,19.255z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M27.274,22.217c0.083,0,0.168-0.01,0.253-0.032c0.25-0.066,0.513-0.144,0.789-0.236                c0.755-0.252,1.487-0.532,2.178-0.833c0.506-0.221,0.737-0.811,0.516-1.317c-0.221-0.506-0.811-0.737-1.317-0.516                c-0.635,0.278-1.311,0.536-2.01,0.769c-0.232,0.077-0.452,0.143-0.661,0.197c-0.535,0.14-0.855,0.686-0.716,1.22                C26.424,21.919,26.829,22.217,27.274,22.217z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M10,17c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S12.206,17,10,17z M10,23c-1.103,0-2-0.897-2-2                s0.897-2,2-2s2,0.897,2,2S11.103,23,10,23z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M40,16c2.206,0,4-1.794,4-4s-1.794-4-4-4s-4,1.794-4,4S37.794,16,40,16z M40,10c1.103,0,2,0.897,2,2                s-0.897,2-2,2s-2-0.897-2-2S38.897,10,40,10z"></path>
+                  </g>
+                </svg>
+                <h5 class="offset-top-20">Directions</h5>
+                <hr class="divider divider-xs bg-bermuda offset-top-20"></a></div>
+            <div class="offset-top-60 offset-md-top-0 section-md-80 box-offer"><a class="d-inline-block d-md-block" href="shops.html">
+                <svg x="0px" y="0px" width="66px" height="65px" viewbox="0 0 53.603 54">
+                  <g>
+                    <path fill="none" d="M36.802,11.498c0-5.326-4.393-9.498-10-9.498c-5.608,0-10,4.172-10,9.498V14h20V11.498z"></path>
+                    <path fill="none" d="M46.802,16h-8v5c0,0.553-0.448,1-1,1c-0.553,0-1-0.447-1-1v-5h-20v5c0,0.553-0.448,1-1,1c-0.553,0-1-0.447-1-1                v-5h-8c-0.586,0-1.154,0.511-1.215,1.093L2.005,51.115c-0.026,0.243,0.042,0.468,0.188,0.631C2.341,51.91,2.556,52,2.802,52h48                c0.245,0,0.46-0.09,0.608-0.254c0.146-0.163,0.214-0.388,0.188-0.631l-3.582-34.022C47.955,16.511,47.387,16,46.802,16z                M15.802,26.378c-2.206,0-4-1.794-4-4c0-0.63,0.149-1.255,0.432-1.809c0.25-0.492,0.85-0.689,1.344-0.437                c0.492,0.25,0.688,0.853,0.437,1.345c-0.142,0.278-0.213,0.58-0.213,0.901c0,1.102,0.897,2,2,2c1.102,0,2-0.898,2-2                c0-0.326-0.074-0.634-0.222-0.917c-0.254-0.491-0.063-1.094,0.427-1.349c0.491-0.253,1.095-0.064,1.349,0.427                c0.292,0.563,0.446,1.199,0.446,1.839C19.802,24.584,18.008,26.378,15.802,26.378z M37.802,26.378c-2.206,0-4-1.794-4-4                c0-0.63,0.149-1.255,0.432-1.809c0.25-0.492,0.85-0.689,1.344-0.437c0.493,0.25,0.688,0.853,0.437,1.345                c-0.142,0.278-0.213,0.58-0.213,0.901c0,1.102,0.897,2,2,2c1.102,0,2-0.898,2-2c0-0.326-0.074-0.634-0.222-0.917                c-0.254-0.491-0.063-1.094,0.427-1.349c0.49-0.253,1.094-0.064,1.349,0.427c0.292,0.563,0.446,1.199,0.446,1.839                C41.802,24.584,40.008,26.378,37.802,26.378z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M50.005,16.884C49.838,15.294,48.4,14,46.802,14h-8v-2.502C38.802,5.051,33.53,0,26.802,0                c-6.729,0-12,5.051-12,11.498V14h-8c-1.599,0-3.037,1.294-3.204,2.884L0.016,50.906c-0.085,0.803,0.167,1.597,0.691,2.178                C1.231,53.666,1.993,54,2.801,54h48.001c0.807,0,1.57-0.334,2.093-0.916c0.524-0.581,0.776-1.375,0.691-2.178L50.005,16.884z                M16.802,11.498c0-5.326,4.392-9.498,10-9.498c5.607,0,10,4.172,10,9.498V14h-20V11.498z M51.41,51.746                C51.262,51.91,51.047,52,50.802,52h-48c-0.246,0-0.461-0.09-0.609-0.254c-0.146-0.163-0.214-0.388-0.188-0.631l3.582-34.022                C5.648,16.511,6.216,16,6.802,16h8v5c0,0.553,0.447,1,1,1c0.552,0,1-0.447,1-1v-5h20v5c0,0.553,0.447,1,1,1c0.552,0,1-0.447,1-1v-5                h8c0.585,0,1.153,0.511,1.214,1.093l3.582,34.022C51.624,51.358,51.556,51.583,51.41,51.746z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M40.007,20.112c-0.49,0.255-0.681,0.858-0.427,1.349c0.148,0.283,0.222,0.591,0.222,0.917                c0,1.102-0.898,2-2,2c-1.103,0-2-0.898-2-2c0-0.321,0.071-0.623,0.213-0.901c0.251-0.492,0.056-1.095-0.437-1.345                c-0.494-0.252-1.094-0.055-1.344,0.437c-0.283,0.554-0.432,1.179-0.432,1.809c0,2.206,1.794,4,4,4s4-1.794,4-4                c0-0.64-0.154-1.276-0.446-1.839C41.101,20.048,40.497,19.859,40.007,20.112z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M18.007,20.112c-0.49,0.255-0.681,0.858-0.427,1.349c0.148,0.283,0.222,0.591,0.222,0.917                c0,1.102-0.898,2-2,2c-1.103,0-2-0.898-2-2c0-0.321,0.071-0.623,0.213-0.901c0.251-0.492,0.055-1.095-0.437-1.345                c-0.494-0.252-1.094-0.055-1.344,0.437c-0.283,0.554-0.432,1.179-0.432,1.809c0,2.206,1.794,4,4,4s4-1.794,4-4                c0-0.64-0.154-1.276-0.446-1.839C19.102,20.048,18.497,19.859,18.007,20.112z"></path>
+                  </g>
+                </svg>
+                <h5 class="offset-top-20">Shops</h5>
+                <hr class="divider divider-xs bg-bermuda offset-top-20"></a></div>
+            <div class="offset-top-60 offset-md-top-0 section-md-80 box-offer"><a class="d-inline-block d-md-block" href="food.html">
+                <svg x="0px" y="0px" width="66px" height="65px" viewbox="0 0 54.02 54.001">
+                  <g>
+                    <path fill="none" d="M3.028,40.001h23.955c0.554-0.021,1.018-0.476,1.017-0.997v-1.003c-0.003-0.675-0.631-1.554-1.292-1.805                c-3.755-1.31-7.702-1.98-11.708-1.98s-7.953,0.67-11.733,1.99C2.63,36.447,2.003,37.325,2,38.005v0.996                C1.999,39.528,2.469,39.985,3.028,40.001z"></path>
+                    <polygon fill="none" points="51.18,15.001 45.019,15.001 45,15.001 27,15.001 20.819,15.001 20.219,18.001 51.78,18.001 	"></polygon>
+                    <polygon fill="none" points="43.455,11.001 28.545,11.001 28.192,13.001 43.807,13.001 	"></polygon>
+                    <polygon fill="none" points="21.148,46.001 15.236,46.001 18.875,47.82 	"></polygon>
+                    <path fill="none" d="M3,44.001h24c0.551,0,1-0.448,1-1s-0.449-1-1-1H3c-0.552,0-1,0.448-1,1S2.448,44.001,3,44.001z"></path>
+                    <path fill="none" d="M28,47.997v-0.996c0.001-0.527-0.47-0.984-1.029-1h-2.62l-4.726,3.781c-0.182,0.145-0.403,0.219-0.625,0.219                c-0.153,0-0.306-0.035-0.448-0.105l-7.789-3.895H3c-0.531,0.016-1.001,0.473-1,0.997v1.003c0.003,0.676,0.63,1.554,1.291,1.804                c7.511,2.623,15.882,2.632,23.441-0.009C27.37,49.555,27.997,48.677,28,47.997z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M47.28,51.168l4.583-31.167H53c0.007,0.001,0.014,0.001,0.019,0c0.552,0,0.999-0.446,1-0.998v-0.003                c0-0.136-0.027-0.267-0.077-0.385l-0.962-4.809c-0.094-0.467-0.504-0.804-0.98-0.804h-6.161l-0.561-3.174                c-0.084-0.477-0.499-0.826-0.984-0.826h-3.226l2.54-6.773l9.105,2.731c0.529,0.156,1.086-0.143,1.245-0.671                c0.158-0.528-0.142-1.086-0.671-1.245l-10-3c-0.508-0.152-1.04,0.115-1.224,0.606l-3,8c-0.043,0.116-0.056,0.235-0.056,0.352                H27.706c-0.486,0-0.901,0.349-0.985,0.826l-0.56,3.174H20c-0.477,0-0.887,0.337-0.981,0.804l-1,5                c-0.058,0.294,0.018,0.598,0.207,0.83c0.191,0.231,0.474,0.366,0.774,0.366h1.132l1.477,10.342                c0.071,0.499,0.499,0.858,0.989,0.858c0.047,0,0.095-0.003,0.143-0.01c0.547-0.078,0.927-0.585,0.848-1.131l-1.436-10.059h27.689                l-4.541,30.876c-0.087,0.599-0.696,1.124-1.301,1.124H28c-0.434,0-0.786-0.094-1.005-0.188c0.14-0.047,0.281-0.089,0.421-0.137                c1.443-0.546,2.578-2.158,2.584-3.675v-0.997c0.002-0.76-0.302-1.456-0.791-1.99C29.695,44.481,30,43.778,30,43.001                c0-0.776-0.304-1.478-0.79-2.011c0.488-0.533,0.792-1.229,0.79-1.989v-1.004c-0.006-1.511-1.14-3.123-2.608-3.68                c-7.984-2.789-16.777-2.797-24.808,0.009C1.14,34.872,0.006,36.484,0,38.001v0.997c-0.003,0.76,0.301,1.456,0.791,1.99                C0.304,41.521,0,42.224,0,43.001c0,0.776,0.304,1.478,0.789,2.011C0.301,45.545-0.003,46.241,0,47.001v1.004                c0.006,1.513,1.14,3.125,2.607,3.68c3.992,1.394,8.162,2.101,12.393,2.101c3.371,0,6.702-0.457,9.949-1.349                c0.365,1.024,1.748,1.564,3.051,1.564h16C45.605,54.001,47.047,52.757,47.28,51.168z M28.545,11.001h14.91l0.352,2H28.192                L28.545,11.001z M20.219,18.001l0.6-3H27h18h0.019h6.161l0.6,3H20.219z M2,38.005c0.003-0.68,0.63-1.558,1.267-1.799                c3.78-1.32,7.727-1.99,11.733-1.99s7.953,0.67,11.708,1.98c0.661,0.251,1.289,1.13,1.292,1.805v1.003                c0.001,0.521-0.463,0.976-1.017,0.997H3.028c-0.559-0.016-1.029-0.473-1.028-1V38.005z M3,42.001h24c0.551,0,1,0.448,1,1                s-0.449,1-1,1H3c-0.552,0-1-0.448-1-1S2.448,42.001,3,42.001z M21.148,46.001l-2.273,1.819l-3.639-1.819H21.148z M3.291,49.805                C2.63,49.555,2.003,48.677,2,48.001v-1.003c-0.001-0.524,0.469-0.981,1-0.997h7.763l7.789,3.895                c0.142,0.07,0.295,0.105,0.448,0.105c0.222,0,0.443-0.074,0.625-0.219l4.726-3.781h2.62c0.559,0.016,1.03,0.473,1.029,1v0.996                c-0.003,0.68-0.63,1.558-1.268,1.799C19.173,52.437,10.802,52.428,3.291,49.805z"></path>
+                  </g>
+                </svg>
+                <h5 class="offset-top-20">Food</h5>
+                <hr class="divider divider-xs bg-bermuda offset-top-20"></a></div>
+            <div class="offset-top-60 offset-md-top-0 section-md-80 box-offer"><a class="d-inline-block d-md-block" href="entertainment.html">
+                <svg x="0px" y="0px" width="67px" height="65px" viewbox="0 0 54 53">
+                  <g>
+                    <path fill="none" d="M33.901,42.264c-1.958-1.336-4.851-2.103-7.937-2.103c-5.489,0-10.127,2.482-10.127,5.419                c0,2.938,4.638,5.42,10.127,5.42c5.437,0,10.031-2.475,10.031-5.404c0-0.009,0.005-0.016,0.005-0.024v-3.113                C35.313,42.749,34.522,42.687,33.901,42.264z"></path>
+                    <path fill="none" d="M44.836,7.986C41.547,7.438,39.366,5.801,38,4.292V9c0,1.547,1.629,4,6,4c3.989,0,6.39,2.692,7.884,5.28                C51.522,12.698,50.106,8.865,44.836,7.986z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M25,9H11c-0.553,0-1,0.447-1,1s0.447,1,1,1h14c0.553,0,1-0.447,1-1S25.553,9,25,9z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M25,18H6c-0.553,0-1,0.447-1,1s0.447,1,1,1h19c0.553,0,1-0.447,1-1S25.553,18,25,18z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M1,29h24c0.553,0,1-0.447,1-1s-0.447-1-1-1H1c-0.553,0-1,0.447-1,1S0.447,29,1,29z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M45.164,6.014c-5.33-0.889-7.154-5.188-7.236-5.388c-0.001-0.003-0.004-0.004-0.005-0.007                c-0.048-0.117-0.119-0.221-0.205-0.31c-0.004-0.004-0.006-0.011-0.01-0.015c-0.104-0.105-0.235-0.177-0.377-0.227                c-0.105-0.038-0.213-0.065-0.326-0.066C37.003,0.001,37.002,0,37,0c-0.049,0-0.092,0.021-0.139,0.028                c-0.078,0.011-0.156,0.012-0.232,0.043c-0.003,0.001-0.005,0.004-0.008,0.005c-0.097,0.04-0.18,0.103-0.258,0.17                c-0.021,0.017-0.049,0.026-0.068,0.045c-0.055,0.055-0.09,0.127-0.132,0.194c-0.026,0.042-0.063,0.077-0.082,0.122                c-0.013,0.03-0.011,0.065-0.021,0.096c-0.03,0.094-0.057,0.188-0.058,0.288C36.002,0.994,36,0.997,36,1v37.16                c-0.004,0.032-0.02,0.058-0.022,0.09c-0.075,1.621-0.502,2.256-0.743,2.376c-0.091,0.047-0.169,0.012-0.207-0.015                c-2.282-1.556-5.586-2.45-9.064-2.45c-6.8,0-12.127,3.259-12.127,7.419c0,4.161,5.327,7.42,12.127,7.42                c6.357,0,11.413-2.889,11.975-6.697C37.97,46.206,38,46.107,38,46V13.029C39.277,14.158,41.218,15,44,15                c4.509,0,6.519,4.753,7.6,7.307c0.194,0.459,0.36,0.849,0.505,1.14C52.277,23.792,52.628,24,53,24c0.076,0,0.153-0.009,0.229-0.026                C53.681,23.866,54,23.464,54,23C54,16.088,54,7.486,45.164,6.014z M36,45.572c0,0.008-0.005,0.015-0.005,0.024                c0,2.929-4.594,5.404-10.031,5.404c-5.489,0-10.127-2.482-10.127-5.42c0-2.937,4.638-5.419,10.127-5.419                c3.086,0,5.979,0.767,7.937,2.103c0.621,0.423,1.412,0.485,2.099,0.195V45.572z M44,13c-4.371,0-6-2.453-6-4V4.292                c1.366,1.509,3.547,3.146,6.836,3.694c5.27,0.879,6.686,4.712,7.048,10.294C50.39,15.692,47.989,13,44,13z"></path>
+                  </g>
+                </svg>
+                <h5 class="offset-top-20">Entertainment</h5>
+                <hr class="divider divider-xs bg-bermuda offset-top-20"></a></div>
+            <div class="offset-top-60 offset-md-top-0 section-md-80 box-offer"><a class="d-inline-block d-md-block" href="parking.html">
+                <svg x="0px" y="0px" width="54px" height="65px" viewbox="0 0 44 54">
+                  <g>
+                    <path fill="none" d="M24.574,15H17v9h7.612c1.244,0,4.138-0.438,4.138-4.5C28.75,15.3,25.002,15,24.574,15z"></path>
+                    <path fill="none" d="M39,5H5C3.346,5,2,6.346,2,8v28c0,1.654,1.346,3,3,3h34c1.654,0,3-1.346,3-3V8C42,6.346,40.654,5,39,5z                M24.612,26H17v5c0,0.552-0.448,1-1,1c-0.553,0-1-0.448-1-1V14c0-0.552,0.447-1,1-1h8.612c2.145,0.071,6.138,1.52,6.138,6.5                C30.75,24.298,27.443,26,24.612,26z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M39,3H23V1c0-0.552-0.447-1-1-1s-1,0.448-1,1v2H5C2.243,3,0,5.243,0,8v28c0,2.757,2.243,5,5,5h16v7                c0,0.552,0.447,1,1,1c2.966,0,4.979,1.698,6.087,3H15.825c0.621-0.784,1.569-1.721,2.879-2.34c0.5-0.236,0.713-0.832,0.478-1.331                c-0.237-0.499-0.831-0.712-1.331-0.477c-3.263,1.54-4.7,4.601-4.759,4.73c-0.143,0.31-0.117,0.67,0.066,0.958                C13.342,53.827,13.659,54,14,54h16c0.35,0,0.674-0.182,0.854-0.481c0.182-0.298,0.195-0.67,0.034-0.98                c-0.112-0.213-2.628-4.941-7.888-5.488V41h16c2.757,0,5-2.243,5-5V8C44,5.243,41.757,3,39,3z M42,36c0,1.654-1.346,3-3,3H5                c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3h34c1.654,0,3,1.346,3,3V36z"></path>
+                    <path class="text-primary" fill="#79d5ca" d="M24.612,13H16c-0.553,0-1,0.448-1,1v17c0,0.552,0.447,1,1,1c0.552,0,1-0.448,1-1v-5h7.612                c2.831,0,6.138-1.702,6.138-6.5C30.75,14.52,26.757,13.071,24.612,13z M24.612,24H17v-9h7.574c0.428,0,4.176,0.3,4.176,4.5                C28.75,23.562,25.856,24,24.612,24z"></path>
+                  </g>
+                </svg>
+                <h5 class="offset-top-20">Parking</h5>
+                <hr class="divider divider-xs bg-bermuda offset-top-20"></a></div>
+          </div>
+        </section>
+        <!-- Our Advantages-->
+        <section class="section-90 section-md-120 bg-selago">
+          <div class="container-wide container-wide-custom">
+            <hr class="divider bg-bermuda">
+            <div class="offset-top-20">
+              <h3>Our Advantages</h3>
+            </div>
+            <div class="row justify-content-sm-center offset-top-90 offset-lg-top-120">
+              <div class="col-sm-10 col-md-6 col-xl-3">
+                <!-- Icon Box-->
+                <div class="icon-box bg-default"><span class="icon icon-md icon-circle icon-outline bg-accent shadow-drop mdi mdi-wifi text-white"></span>
+                  <div class="offset-top-30 inset-xl-left-35 inset-xl-right-35">
+                    <h5>Free Wi-Fi</h5>
+                    <hr class="divider divider-xs bg-bermuda offset-top-15">
+                    <p class="offset-top-25 text-gray-light">We have a network accessible for free across the entire common mall area.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-90 offset-md-top-0">
+                <!-- Icon Box-->
+                <div class="icon-box bg-default"><span class="icon icon-md icon-circle icon-outline bg-accent shadow-drop mdi mdi-wallet-giftcard text-white"></span>
+                  <div class="offset-top-35 inset-xl-left-35 inset-xl-right-35">
+                    <h5>Mall Gift Cards</h5>
+                    <hr class="divider divider-xs bg-bermuda offset-top-15">
+                    <p class="offset-top-25 text-gray-light">The best gift solution is available at your favorite shopping mall.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-90 offset-xl-top-0">
+                <!-- Icon Box-->
+                <div class="icon-box bg-default"><span class="icon icon-md icon-circle icon-outline bg-accent shadow-drop mdi mdi-wallet-travel text-white"></span>
+                  <div class="offset-top-35 inset-xl-left-35 inset-xl-right-35">
+                    <h5>Lost and Found</h5>
+                    <hr class="divider divider-xs bg-bermuda offset-top-15">
+                    <p class="offset-top-25 text-gray-light">Did you lose an item while visiting the mall? Call now <a class="text-nowrap text-gray-light" href="tel:#">1-800-1234-456</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-90 offset-xl-top-0">
+                <!-- Icon Box-->
+                <div class="icon-box bg-default"><span class="icon icon-md icon-circle icon-outline bg-accent shadow-drop mdi mdi-baby text-white"></span>
+                  <div class="offset-top-35 inset-xl-left-35 inset-xl-right-35">
+                    <h5>Stroller Rental</h5>
+                    <hr class="divider divider-xs bg-bermuda offset-top-15">
+                    <p class="offset-top-25 text-gray-light">Strollers can be rented but should be returned to a rental location.</p>
+                  </div>
+                </div>
+              </div>
+            </div><a class="btn btn-width-175 btn-bermuda offset-top-35 offset-lg-top-60" href="entertainment.html">learn more</a>
+          </div>
+        </section>
+        <!-- Mall Gifts Cards-->
+        <section class="section-80 section-lg-0 bg-shark">
+          <div class="row no-gutters justify-content-sm-center">
+            <div class="col-sm-10 col-md-8 col-lg-12 col-xl-6 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
+              <!-- Thumbnail Modern--><a class="thumbnail-modern text-left" href="sale-single.html">
+                <figure><img width="960" height="340" src="images/pages/gift-cards-11-960x340.jpg" alt=""></figure>
+                <div class="figcaption thumbnail-modern-figcaption-top">
+                  <h4 class="text-spacing-40 text-uppercase">Save 10%</h4>
+                  <p class="offset-top-5">at Audrey Mall Cinema Hall</p>
+                </div></a>
+              <div class="row no-gutters justify-content-sm-center offset-top-60 offset-lg-top-0">
+                <div class="col-md-6 inset-md-right-15 inset-lg-right-0">
+                  <!-- Thumbnail Modern--><a class="thumbnail-modern text-left" href="sale-single.html">
+                    <figure><img width="480" height="340" src="images/pages/gift-cards-13-480x340.jpg" alt=""></figure>
+                    <div class="figcaption thumbnail-modern-figcaption-top">
+                      <h4 class="text-spacing-40 text-uppercase">Save 30%</h4>
+                      <p class="offset-top-5">at all jewelry stores of Audrey Mall</p>
+                    </div></a>
+                </div>
+                <div class="col-md-6 offset-top-60 offset-md-top-0 inset-md-right-15 inset-lg-right-0">
+                  <!-- Thumbnail Modern--><a class="thumbnail-modern text-left" href="sale-single.html">
+                    <figure><img width="480" height="340" src="images/pages/gift-cards-14-480x340.jpg" alt=""></figure>
+                    <div class="figcaption thumbnail-modern-figcaption-bottom">
+                      <h4 class="text-spacing-40 text-uppercase">Save 25%</h4>
+                      <p class="offset-top-5">at men’s clothes shops</p>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-12 col-xl-6 offset-top-60 offset-lg-top-0 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
+              <!-- Thumbnail Modern--><a class="thumbnail-modern thumbnail-modern-lg text-left" href="sale-single.html">
+                <figure><img width="960" height="680" src="images/pages/gift-cards-12-960x680.jpg" alt=""></figure>
+                <div class="figcaption thumbnail-modern-figcaption-top">
+                  <h1 class="text-spacing-40 text-uppercase text-big-64">FREE COFFEE</h1>
+                  <p class="h5-variant-2 offset-top-5 offset-lg-top-15">at Audrey Cafe for all Audrey Club members</p>
+                </div></a>
+            </div>
+          </div>
+        </section>
+        <!-- Partners-->
+        <section class="section-top-70 section-bottom-80 bg-selago">
+          <div class="container-wide container-wide-custom">
+            <!-- Owl Carousel-->
+            <div class="owl-carousel owl-inset-20 owl-dots-offset-top-35 owl-carousel-fullheight" data-items="2" data-md-items="3" data-xxl-items="6" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false" data-dots="true"><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-21-127x69.png" width="127" height="69" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-22-87x87.png" width="87" height="87" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-23-121x81.png" width="121" height="81" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-24-203x36.png" width="203" height="36" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-25-124x61.png" width="124" height="61" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-26-134x55.png" width="134" height="55" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-21-127x69.png" width="127" height="69" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-22-87x87.png" width="87" height="87" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-23-121x81.png" width="121" height="81" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-24-203x36.png" width="203" height="36" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-25-124x61.png" width="124" height="61" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-26-134x55.png" width="134" height="55" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-21-127x69.png" width="127" height="69" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-22-87x87.png" width="87" height="87" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-23-121x81.png" width="121" height="81" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-24-203x36.png" width="203" height="36" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-25-124x61.png" width="124" height="61" alt=""></a><a class="box-xl box-flex box-fullheight box-hovered bg-default" href="#"><img class="img-responsive center-block" src="images/products/product-logo-26-134x55.png" width="134" height="55" alt=""></a></div>
+          </div>
+        </section>
+        <!-- Events-->
+        <section class="section-90 section-md-120">
+          <div class="container-wide container-wide-custom">
+            <hr class="divider bg-bermuda">
+            <div class="offset-top-20">
+              <h3>Events</h3>
+            </div>
+            <div class="row justify-content-sm-center offset-60 row-40">
+              <div class="col-md-8 col-xl-4">
+                <!-- Post Event-->
+                <div class="post-event text-left">
+                  <div class="post-event-thumbnail-wrap">
+                    <!-- Thumbnail Rayen-->
+                    <figure class="thumbnail-rayen"><img width="570" height="310" src="images/blog/post-09-570x310.jpg" alt="">
+                      <figcaption><a class="text-white" data-lightgallery="item" href="images/gallery/portfolio-31-1170x759_original.jpg"><span class="icon icon-normal icon-lg mdi mdi-plus"></span></a></figcaption>
+                    </figure>
+                    <div class="post-event-list">
+                      <!-- List-->
+                      <ul class="list list-20">
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-calendar text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Sep, 21</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-clock text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">6:00pm</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-ticket-account text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Free</span></span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="offset-top-20 inset-right-10">
+                    <h5><a href="event-single.html">The KidsLand Summer Day</a></h5>
+                    <div class="offset-top-15">
+                      <p>The KidsLand SummerDay will begin on Saturday, July 4, with a special celebration and will run until Sunday, September...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 col-xl-4">
+                <!-- Post Event-->
+                <div class="post-event text-left">
+                  <div class="post-event-thumbnail-wrap">
+                    <!-- Thumbnail Rayen-->
+                    <figure class="thumbnail-rayen"><img width="570" height="310" src="images/blog/post-10-570x310.jpg" alt="">
+                      <figcaption><a class="text-white" data-lightgallery="item" href="images/gallery/portfolio-32-1170x780_original.jpg"><span class="icon icon-normal icon-lg mdi mdi-plus"></span></a></figcaption>
+                    </figure>
+                    <div class="post-event-list">
+                      <!-- List-->
+                      <ul class="list list-20">
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-calendar text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Sep, 21</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-clock text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">6:00pm</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-ticket-account text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Free</span></span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="offset-top-20 inset-right-10">
+                    <h5><a href="event-single.html">Audrey Mall Rock Event</a></h5>
+                    <div class="offset-top-15">
+                      <p>Chart-topping sensation Pixie Lott will unveil her very own festival-inspired addition to her latest album this Saturday evening...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 col-xl-4">
+                <!-- Post Event-->
+                <div class="post-event text-left">
+                  <div class="post-event-thumbnail-wrap">
+                    <!-- Thumbnail Rayen-->
+                    <figure class="thumbnail-rayen"><img width="570" height="310" src="images/blog/post-11-570x310.jpg" alt="">
+                      <figcaption><a class="text-white" data-lightgallery="item" href="images/gallery/portfolio-33-1170x731_original.jpg"><span class="icon icon-normal icon-lg mdi mdi-plus"></span></a></figcaption>
+                    </figure>
+                    <div class="post-event-list">
+                      <!-- List-->
+                      <ul class="list list-20">
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-calendar text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Sep, 21</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-clock text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">6:00pm</span></span></li>
+                        <li class="box-xs bg-accent text-center"><span class="icon icon-normal icon-sm mdi mdi-ticket-account text-white"></span><span class="d-block offset-top-0"><span class="text-small text-white">Free</span></span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="offset-top-20 inset-right-10">
+                    <h5><a href="event-single.html">Chevrolet Open Test Drive</a></h5>
+                    <div class="offset-top-15">
+                      <p>Free and Open Test Drive of The Chevrolet Camaro will be available this weekend at Audrey Mall! Feel free to...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><a class="btn btn-width-200 btn-primary offset-top-40 offset-lg-top-60" href="events.html">view all events</a>
+          </div>
+        </section>
+        <!-- Newsletter-->
+        <section>
+          <!-- RD Video-->
+          <div class="bg-vide bg-vide-1" data-vide-bg="mp4: video/bg-video-2-lg, poster: video/bg-video-2-lg" data-vide-options="posterType: jpg">
+            <div class="bg-overlay-darker-02">
+              <div class="container-wide container-wide-custom section-80 section-md-120">
+                <div class="row justify-content-sm-center">
+                  <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                    <hr class="divider bg-bermuda">
+                    <div class="offset-top-20">
+                      <h3 class="text-white">Newsletter</h3>
+                    </div>
+                    <p class="offset-top-30 text-white text-center">Sign up to our newsletter and be the first to know about the latest news, special offers, and events.</p>
+                    <div class="offset-top-20">
+                      <!-- RD Mailform-->
+                      <form class="rd-mailform form-inline-custom text-left subscribe-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input class="form-control" id="forms-subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+                          </div>
+                          <div class="input-group-btn">
+                            <button class="btn btn-width-165 btn-bermuda" type="submit">Subscribe</button>
+                          </div>
+                        </div>
+                        <div class="form-output" id="forms-subscribe"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- About Audrey Mall-->
+        <section class="section-80 section-md-120">
+          <div class="container-wide container-wide-custom">
+            <div class="row justify-content-sm-center text-left">
+              <div class="col-md-10 col-lg-5 col-xxl-4">
+                <hr class="divider hr-left-0 bg-bermuda">
+                <div class="offset-top-20">
+                  <h3>About Audrey Mall</h3>
+                </div>
+                <p class="offset-top-35">Audrey Mall is a four-story vertical shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
+                <!-- List Marked-->
+                <ul class="list-marked list-link-bermuda-hovered list-marked-variant-2 list-10 inset-left-35 offset-top-15">
+                  <li><a href="parking.html">Free Parking</a></li>
+                  <li><a href="entertainment.html">Entertainment Center</a></li>
+                  <li><a href="gift-cards.html">A Variety of Events Available Weekly</a></li>
+                  <li><a href="shops.html">4 stories of shops, boutiques, restaurants etc.</a></li>
+                </ul><a class="btn btn-width-175 btn-primary offset-top-25" href="entertainment.html">learn more</a>
+              </div>
+              <div class="col-md-10 col-lg-3 offset-top-40 offset-lg-top-0 text-center">
+                <div class="row justify-content-sm-center">
+                  <div class="col-sm-4 col-lg-12">
+                    <h3 class="font-accent counter text-bermuda offset-lg-top-20" data-from="0" data-to="520"></h3>
+                    <h5 class="offset-top-15">Retail Stores</h5>
+                  </div>
+                  <div class="col-sm-4 col-lg-12 offset-top-35 offset-sm-top-0 offset-lg-top-65">
+                    <!-- CountTo-->
+                    <h3 class="font-accent counter-wrap text-bermuda"><span class="counter d-inline-block" data-from="0" data-to="4"></span><span class="counter-small-last d-inline-block">M</span></h3>
+                    <h5 class="offset-top-15">Yearly Visitors</h5>
+                  </div>
+                  <div class="col-sm-4 col-lg-12 offset-top-35 offset-sm-top-0 offset-lg-top-65">
+                    <!-- CountTo-->
+                    <h3 class="font-accent counter-wrap text-bermuda"><span class="counter-small-first d-inline-block" style="margin-right:-10px;">$</span><span class="counter d-inline-block inset-left-10" data-from="0" data-to="9"></span><span class="counter-small-last d-inline-block">M</span></h3>
+                    <h5 class="offset-top-15">Annual Income</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-10 col-lg-4 col-xxl-3 offset-top-40 offset-lg-top-0">
+                <!-- Quote Boxed-->
+                <blockquote class="quote quote-boxed text-left">
+                  <div class="quote-boxed-body bg-default"><span class="icon icon-rotate-180 mdi mdi-format-quote text-primary"></span>
+                    <h5 class="text-regular font-monospace font-italic text-gray-dark inset-left-10 offset-top-10">
+                      <q>All the staff and security at Audrey Mall are very helpful. The Centre has a cheerful, friendly atmosphere which makes it a good place to shop.</q>
+                    </h5>
+                  </div>
+                  <div class="offset-top-45">
+                    <!-- Unit-->
+                    <div class="unit align-items-center flex-row unit-spacing-sm">
+                      <div class="unit-left"><img class="rounded-circle img-responsive center-block" src="images/users/user-elizabeth-wong-80x80.jpg" width="80" height="80" alt=""></div>
+                      <div class="unit-body">
+                        <h6><a href="#">Elizabeth Wong</a></h6>
+                        <p class="text-base offset-top-5 font-italic">Graphic Designer</p>
+                      </div>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Latest News-->
+        <section class="section-80 section-md-120 bg-selago">
+          <div class="container-wide container-wide-custom">
+            <hr class="divider bg-bermuda">
+            <div class="offset-top-20">
+              <h3>Latest News</h3>
+            </div>
+            <div class="row justify-content-sm-center offset-top-40 offset-lg-top-60 text-left">
+              <div class="col-sm-10 col-md-6 col-xl-3">
+                <!-- Post Box-->
+                <div class="post-box">
+                  <div class="post-box-img-wrap"><a class="thumbnail-robben" href="blog-post.html"><span class="thumbnail-robben-img-wrap"><img class="img-responsive center-block" src="images/blog/post-01-420x300.jpg" width="420" height="300" alt=""></span></a><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Article</span></a></div>
+                  <div class="post-box-caption bg-default"><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda d-inline-block text-middle"></span>
+                    <div class="d-inline-block text-middle">
+                      <p class="font-italic">2 days ago</p>
+                    </div>
+                    <h5 class="offset-top-20"><a href="blog-post.html">Top 3 Reasons to Visit Audrey Mall at Any Season</a></h5>
+                    <p class="offset-top-20">Regardless of what season it is now, there are always plenty of reasons to visit our mall. In this...</p>
+                  </div><a class="btn btn-block btn-rect btn-icon btn-icon-right btn-bermuda text-left" href="blog-post.html"><span class="icon mdi mdi-arrow-right"></span>Read more</a>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-30 offset-md-top-0">
+                <!-- Post Box-->
+                <div class="post-box">
+                  <div class="post-box-img-wrap"><a class="thumbnail-robben" href="blog-post.html"><span class="thumbnail-robben-img-wrap"><img class="img-responsive center-block" src="images/blog/post-02-420x300.jpg" width="420" height="300" alt=""></span></a><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Article</span></a></div>
+                  <div class="post-box-caption bg-default"><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda d-inline-block text-middle"></span>
+                    <div class="d-inline-block text-middle">
+                      <p class="font-italic">2 days ago</p>
+                    </div>
+                    <h5 class="offset-top-20"><a href="blog-post.html">Perfect Clothes to Wear When It’s Hot</a></h5>
+                    <p class="offset-top-20">In the middle of a heatwave, your corporate uniform — the usual blazers, slacks, and button-downs — is...</p>
+                  </div><a class="btn btn-block btn-rect btn-icon btn-icon-right btn-bermuda text-left" href="blog-post.html"><span class="icon mdi mdi-arrow-right"></span>Read more</a>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-30 offset-xl-top-0">
+                <!-- Post Box-->
+                <div class="post-box">
+                  <div class="post-box-img-wrap"><a class="thumbnail-robben" href="blog-post.html"><span class="thumbnail-robben-img-wrap"><img class="img-responsive center-block" src="images/blog/post-03-420x300.jpg" width="420" height="300" alt=""></span></a><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Article</span></a></div>
+                  <div class="post-box-caption bg-default"><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda d-inline-block text-middle"></span>
+                    <div class="d-inline-block text-middle">
+                      <p class="font-italic">2 days ago</p>
+                    </div>
+                    <h5 class="offset-top-20"><a href="blog-post.html">Planning Your Weekend? Visit Audrey Mall!</a></h5>
+                    <p class="offset-top-20">Audrey Mall often evokes memories of endless shopping, thrilling rides or concerts. But we...</p>
+                  </div><a class="btn btn-block btn-rect btn-icon btn-icon-right btn-bermuda text-left" href="blog-post.html"><span class="icon mdi mdi-arrow-right"></span>Read more</a>
+                </div>
+              </div>
+              <div class="col-sm-10 col-md-6 col-xl-3 offset-top-30 offset-xl-top-0">
+                <!-- Post Box-->
+                <div class="post-box">
+                  <div class="post-box-img-wrap">
+                    <div class="embed-responsive embed-responsive-2">
+                      <iframe class="embed-responsive-item" width="560" height="315" src="#" sandbox="" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                    </div><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Video</span></a>
+                  </div>
+                  <div class="post-box-caption bg-default"><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda d-inline-block text-middle"></span>
+                    <div class="d-inline-block text-middle">
+                      <p class="font-italic">2 days ago</p>
+                    </div>
+                    <h5 class="offset-top-20"><a href="blog-post.html">How to Keep Your Holiday Glow: a Cheat’s Guide to Post-Holiday Beauty</a></h5>
+                    <p class="offset-top-20">Summer is heaven-sent for low-key beauty, giving us an opportunity to dial down our makeup...</p>
+                  </div><a class="btn btn-block btn-rect btn-icon btn-icon-right btn-bermuda text-left" href="blog-post.html"><span class="icon mdi mdi-arrow-right"></span>Read more</a>
+                </div>
+              </div>
+            </div><a class="btn btn-width-200 btn-primary offset-top-40 offset-lg-top-60" href="blog-classic.html">view all news</a>
+          </div>
+        </section>
+        <section>
+          <!-- Google Map-->
+          <div class="google-map-container"><iframe src="https://www.amap.com/" width="100%" height="100%" frameborder="0" style="border:0" sandbox=""></iframe></div>
+        </section>
+      </main>
+      <!-- Page Footer-->
+      <footer class="page-footer bg-shark section-80 section-lg-120">
+        <div class="container-wide container-wide-custom">
+          <div class="row justify-content-sm-center justify-content-sm-between text-left">
+            <div class="col-md-6 col-lg-3 col-xxl-2 offset-xxl-1 order-lg-3">
+              <hr class="divider hr-left-0 bg-bermuda">
+              <div class="offset-top-15">
+                <h5 class="text-white">Tags</h5>
+              </div>
+              <div class="offset-top-30">
+                <div class="group group-sm"><a class="btn btn-tag btn-bermuda-outline-v2" href="shops.html">Shops</a><a class="btn btn-tag btn-bermuda-outline-v2" href="entertainment.html">Entertainment</a><a class="btn btn-tag btn-bermuda-outline-v2" href="blog-classic.html">Blog</a><a class="btn btn-tag btn-bermuda-outline-v2" href="gift-cards.html">Fashion</a><a class="btn btn-tag btn-bermuda-outline-v2" href="food.html">Cafe</a><a class="btn btn-tag btn-bermuda-outline-v2" href="entertainment.html">Services</a></div>
+              </div>
+              <hr class="divider hr-left-0 bg-bermuda offset-top-65 offset-md-top-90">
+              <div class="offset-top-15">
+                <h5 class="text-white">Flickr Feed</h5>
+                <div class="group-sm flickr widget-flickrfeed offset-top-30" data-lightgallery="group" data-lg-thumbnail="false" data-flickr-tags="tm61211"><a class="flickr-item" data-lightgallery="item" href="" data-image_c="href" data-type="flickr-item">
+                    <figure class="thumbnail-rayen thumbnail-rayen-primary"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src">
+                      <figcaption><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-plus"></span></figcaption>
+                    </figure></a><a class="flickr-item" data-lightgallery="item" href="" data-image_c="href" data-type="flickr-item">
+                    <figure class="thumbnail-rayen thumbnail-rayen-primary"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src">
+                      <figcaption><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-plus"></span></figcaption>
+                    </figure></a><a class="flickr-item" data-lightgallery="item" href="" data-image_c="href" data-type="flickr-item">
+                    <figure class="thumbnail-rayen thumbnail-rayen-primary"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src">
+                      <figcaption><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-plus"></span></figcaption>
+                    </figure></a></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2 offset-xxl-1 offset-top-60 offset-md-top-0 order-lg-4">
+              <hr class="divider hr-left-0 bg-bermuda">
+              <div class="offset-top-15">
+                <h5 class="text-white">Links</h5>
+              </div>
+              <!-- List Marked-->
+              <ul class="list list-white list-marked list-marked-white text-left offset-top-25 inset-left-5">
+                <li><a class="link-accent" href="shops.html">Shops</a></li>
+                <li><a class="link-accent" href="food.html">Food</a></li>
+                <li><a class="link-accent" href="entertainment.html">Entertainment</a></li>
+                <li><a class="link-accent" href="parking.html">Parking</a></li>
+                <li><a class="link-accent" href="shops.html">Careers</a></li>
+                <li><a class="link-accent" href="entertainment.html">About Us</a></li>
+                <li><a class="link-accent" href="directions.html">Directions</a></li>
+                <li><a class="link-accent" href="entertainment.html">Services</a></li>
+                <li><a class="link-accent" href="events.html">Events</a></li>
+                <li><a class="link-accent" href="sales.html">Sales</a></li>
+              </ul>
+            </div>
+            <div class="col-xxl-1 order-lg-5"></div>
+            <div class="col-md-6 col-lg-3 col-xxl-2 offset-xxl-1 offset-top-60 offset-sm-top-30 offset-lg-top-0 order-lg-2">
+              <hr class="divider hr-left-0 bg-bermuda">
+              <div class="offset-top-15">
+                <h5 class="text-white">Contact Information</h5>
+                <!-- Contact Info-->
+                <address class="contact-info offset-top-35 p">
+                  <!-- Unit-->
+                  <div class="unit flex-row unit-spacing-xs">
+                    <div class="unit-left"><span class="icon icon-sm icon-sm-variant-2 icon-normal mdi mdi-map-marker text-bermuda"></span></div>
+                    <div class="unit-body"><a class="text-gray-lighter" href="contacts.html">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></div>
+                  </div>
+                  <!-- Unit-->
+                  <div class="unit flex-row unit-spacing-xs offset-top-20">
+                    <div class="unit-left"><span class="icon icon-sm icon-sm-variant-2 icon-normal mdi mdi-calendar-clock text-bermuda"></span></div>
+                    <div class="unit-body">
+                      <p class="text-gray-lighter">Opening Hours: 9:00am–9:00pm Supermarket: 7:00am–11:00pm</p>
+                    </div>
+                  </div>
+                  <!-- Unit-->
+                  <div class="unit flex-row unit-spacing-xs offset-top-20">
+                    <div class="unit-left"><span class="icon icon-sm icon-sm-variant-2 icon-normal mdi mdi-phone text-bermuda"></span></div>
+                    <div class="unit-body">
+                      <p class="text-gray-lighter"><a class="text-gray-lighter" href="tel:#">1-800-3214-987</a><a class="text-gray-lighter d-block" href="tel:#">1-800-9514-654</a></p>
+                    </div>
+                  </div>
+                  <!-- Unit-->
+                  <div class="unit flex-row unit-spacing-xs offset-top-25">
+                    <div class="unit-left"><span class="icon icon-sm icon-sm-variant-2 icon-normal mdi mdi-email-outline text-bermuda"></span></div>
+                    <div class="unit-body">
+                      <p class="text-gray-lighter"><a class="text-gray-lighter" href="mailto:#">mail@demolink.org</a></p>
+                    </div>
+                  </div>
+                </address>
+                <ul class="list-white list-inline list-inline-2 list-primary offset-top-30">
+                  <li><a class="icon icon-sm icon-circle fa fa-facebook text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle fa fa-twitter text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle fa fa-pinterest-p text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle fa fa-vimeo text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle fa fa-google text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle fa fa-rss text-gray-lighter" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xxl-2 offset-xxl-1 offset-top-60 offset-md-top-30 offset-lg-top-0 order-lg-1">
+              <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-202x56.png" alt="" width="101" height="28"/><img class="brand-logo-light" src="images/logo-inverse-202x56.png" alt="" width="101" height="28"/></a>
+              <p class="text-gray-lighter text-left offset-top-20 offset-xl-top-50">Audrey Mall is a four-story shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
+              <div class="offset-top-20 offset-xl-top-50">
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><a class="text-gray-light" href="privacy-policy.html">Privacy Policy</a> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
