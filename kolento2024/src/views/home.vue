@@ -29,12 +29,17 @@
           <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item,idx) in specialGroup" :key="idx">
             <a href="drimo/index.html" target="_blank">
               <div class="item-imag">
-                <img :src="item.pic" class="img-responsive radius" alt="">
-                <p class="product-title">{{ item.name }}</p>
-                <div class="info">
-                  <p class="price">{{ item.price }}</p>
-                  <p class="page">{{ item.page }}</p>
+                <div class="img-box">
+                  <img :src="item.pic" class="img-responsive radius" alt="">
                 </div>
+                <div class="product-title">
+                  <p class="name">{{ item.name }}</p>
+                  <div class="info">
+                    <p class="price"><b>价格：</b>{{ item.price }}元</p>
+                    <p class="page"><b>页数：</b>{{ item.page }}</p>
+                  </div>
+                </div>
+
               </div>
             </a>
           </div>
@@ -46,37 +51,20 @@
       <div class="container">
         <div class="row">
           <h2 class="title">热卖爆款</h2>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-              <a href="drimo/blog.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/blog-1.png" class="img-responsive radius" alt="">
-                      <p class="product-title">Blog List - 01</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-              <a href="drimo/blog-right-sidebar.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/blog-2.png" class="img-responsive radius" alt="">
-                      <p class="product-title">Blog List - 02</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-              <a href="drimo/single-blog.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/blog-3.png" class="img-responsive radius" alt="">
-                      <p class="product-title">Blog Details</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-              <a href="drimo/404.html" target="_blank">
-                  <div class="item-imag">
-                      <img src="@/assets/images/product/error_page.png" class="img-responsive radius" alt="">
-                      <p class="product-title">Error</p>
-                  </div>
-              </a>
+          <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item,idx) in hotGroup" :key="idx">
+            <div class="item-imag">
+              <div class="img-box">
+                <img :src="item.pic" class="img-responsive radius" alt="">
+              </div>
+              <div class="product-title">
+                <p class="name">{{ item.name }}</p>
+                <div class="info">
+                  <p class="price"><b>价格：</b>{{ item.price }}元</p>
+                  <p class="page"><b>页数：</b>{{ item.page }}</p>
+                </div>
+              </div>
+
+              </div>
           </div>
         </div>
       </div>
@@ -100,6 +88,14 @@
     {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
     {id:5,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
     {id:6,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+  ])
+
+  import hotPic1 from '@/assets/images/product/blog-1.png';
+  let hotGroup = ref([
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
   ])
 </script>
 
@@ -126,6 +122,7 @@
     text-decoration: none;
     outline: none;
     transition: all 0.6s ease-in-out;
+    font-size: 16px;
   }
 
   a:hover,
@@ -211,6 +208,7 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 60px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   }
 
   .hero-text h3 {
@@ -224,6 +222,7 @@
     font-weight: bold;
     display: inline-block;
     min-height: 40px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   }
 
   .hero-text h4 {
@@ -231,6 +230,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     margin-bottom: 60px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   }
 
   .view-demo {
@@ -389,6 +389,9 @@
     -moz-box-shadow: 0px 0px 57px -11px rgba(0,0,0,0.3);
     box-shadow: 0px 0px 57px -11px rgba(0,0,0,0.3);
     position: relative;
+    .name {font-size: 20px;font-weight: bold;}
+    .img-box {overflow: hidden;}
+    img {transition:all ease 0.3s;}
   }
 
   .item-imag:hover {
@@ -405,17 +408,22 @@
     box-shadow: 0px 4px 6px -3px #959595;
   }
 
+  .item-imag:hover img {
+    transform: scale(1.1);
+  }
+
   .info {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // background: linear-gradient(0deg,transparent,rgba(0,0,0,.8));
     display:flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding:0.6rem 0.6rem;
+    padding:16px 20px 0;
     p{margin-bottom: 0;}
+    .price {color:#333;}
+    .page {color:#333;}
+  }
+
+  .item-imag:hover .info {
     .price {color:#fafd00;}
     .page {color:#fff;}
   }
