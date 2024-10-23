@@ -1,162 +1,173 @@
 <template>
   <div class="home">
-    <Top/>
-    <div class="cont-box filter-box">
-      <div class="con">
-        <Filter/>
-      </div>
-    </div>
 
-    <div class="cont-box pro-wrap">
-      <div class="pro-box">
-        <ul class="pro-con">
-          <li class="pro-list" v-for="(item, index) in proGroup" :key="index">
-            <div class="pro-img">
-              <img src="@/assets/images/demo.jpg" alt="" />
-                <div class="info">
-                <p class="price">价格：{{ item.price }}元</p>
-                <p class="page">页数：{{ item.page }}</p>
+    <section class="hero-area-fix">
+      <div class="hero-area" id="water">
+        <div class="container">
+          <div class="row">
+            <div class="hero-text">
+              <h1>Kolento</h1>
+              <div id="typed-strings">
+                <h3>网页模版 个人网站 官网商城 后台系统</h3>
+                <h3>HTML5 CSS3 JQUERY VUE 微信小程序</h3>
+                <h3>海量网页模版 供您选择</h3>
               </div>
+              <h3><span id="typed"></span></h3>
+              <h4>登记去向 保证不重复</h4>
+              <a href="#" class="btn view-demo" data-scroll-nav="1">查看案例</a>
+              <a href="#" class="btn buy-now">使用教程</a>
             </div>
-            <div class="name" :title="item.name">{{ item.name }}</div>
-            <div class="desc">
-              <p class="p1 mini">编号：<van-tag type="success">{{ item.num }}</van-tag></p>
-              <p class="p2 mini">技术：<van-tag type="primary">{{ item.tech }}</van-tag></p>
-            </div>
-
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <img class="miao" style="width: 360px" src="@/assets/images/miao.webp" alt="">
+    <section class="product-landing pro_d" data-scroll-index="1">
+      <div class="container">
+        <div class="row">
+          <h2 class="title">10元特价</h2>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-1.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 01</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-2.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-2.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 02</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-3.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-3.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 03</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-4.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-4.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 04</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-5.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-5.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 05</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-6.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-6.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 06</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-7.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-7.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 07</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-8.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-8.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 08</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-9.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-9.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 09</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-10.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-10.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 10</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <a href="drimo/index-11.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/index-11.png" class="img-responsive radius" alt="">
+                      <p class="product-title">OnePage - 11</p>
+                  </div>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <Bottom/>
+    <section class="saas-landing">
+      <div class="container">
+        <div class="row">
+          <h2 class="title">热卖爆款</h2>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <a href="drimo/blog.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/blog-1.png" class="img-responsive radius" alt="">
+                      <p class="product-title">Blog List - 01</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <a href="drimo/blog-right-sidebar.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/blog-2.png" class="img-responsive radius" alt="">
+                      <p class="product-title">Blog List - 02</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <a href="drimo/single-blog.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/blog-3.png" class="img-responsive radius" alt="">
+                      <p class="product-title">Blog Details</p>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <a href="drimo/404.html" target="_blank">
+                  <div class="item-imag">
+                      <img src="@/assets/images/product/error_page.png" class="img-responsive radius" alt="">
+                      <p class="product-title">Error</p>
+                  </div>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     
   </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-  import { Tag } from 'vant';
-  import Top from '@/components/top.vue'
-  import Filter from '@/components/filter.vue'
-  import Bottom from '@/components/bottom.vue'
-
-  let proGroup = ref([
-    {name:'个人博客',id:1,num:'A001',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:2,num:'A002',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:3,num:'A003',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:4,num:'A004',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:5,num:'A005',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:6,num:'A006',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:7,num:'A007',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:8,num:'A008',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:1,num:'A001',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:2,num:'A002',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:3,num:'A003',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:4,num:'A004',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:5,num:'A005',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:6,num:'A006',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:7,num:'A007',tech:'div+css',price:10,page:1},
-    {name:'个人博客',id:8,num:'A008',tech:'div+css',price:10,page:1},
-  ])
+  
 </script>
 
 <style scoped lang="scss">
-  .home {
-    background: #F8E6E6;
-    position: relative;
-    .miao {
-      position: fixed;
-      bottom: 0;
-      right: 30px;
-    }
-  }
-  .cont-box {
-    // background: #eff2f5;
-    padding: 4.8rem 1rem 1.2rem;
-    .con {
-      max-width: 1440px;
-      margin:0 auto;
-    }
-  }
-  // .filter-box {
-  //   background: url('@/assets/images/bj2.png') no-repeat top center;
-  //   background-size: cover;
-  // }
-  .pro-wrap {
-    // background: #fff;
-    padding: 0.2rem 0.8rem 1rem;
-    
-  }
-  .pro-box {
-    max-width: 1440px;
-    margin:0 auto;
-    position: relative;
-    z-index:200;
-    .pro-con {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .pro-list {
-      background: rgba(248,249,250,0.7);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      padding-bottom: 0.6rem;
-      .pro-img {
-        width: 100%;
-        overflow: hidden;
-        height: 15rem;
-        border-radius:0.4rem 0.4rem 0 0;
-        position: relative;
-        img{
-          width: 100%;
-          transition:all ease 0.3s;
-          transform: scale(1);
-          object-fit: cover;
-        }
-        // img:hover{
-        //   transform: scale(1.1);
-        // }
-      }
-      .name {
-        padding:1rem 0.6rem 0.2rem 0.6rem;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      .desc {
-        padding:0.6rem 0.6rem 0 0.6rem;
-        p{margin-bottom: 0.4rem;}
-      }
-      .info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(180deg,transparent,rgba(0,0,0,.8));
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding:0.6rem 0.6rem;
-        p{margin-bottom: 0;}
-        .price {color:#fafd00;}
-        .page {color:#fff;}
-      }
-    }
-    .pro-list:hover {
-      transform: translateY(-10px);
-    }
-  }
-
+  
 
 </style>
  

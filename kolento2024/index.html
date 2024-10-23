@@ -5,32 +5,63 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>静态网页模版商城</title>
+    <link href="/src/assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/assets/styles/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/src/assets/styles/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/assets/styles/themify-icons.css">
+    <link rel="stylesheet" href="/src/assets/styles/animate.css">
+    <!--css-->
+    <link rel="stylesheet" href="/src/assets/styles/style.css">
   </head>
   <body>
     <div id="app"></div>
+    
     <script type="module" src="/src/main.js">
 
-      // 动态设置根元素的字体大小
-      function setRemUnit() {
-        const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-        const baseWidth = 375; // 基准宽度（以 iPhone 6s 的宽度 375px 为例）
-        const baseFontSize = 16; // 基准字体大小
-        const scale = baseWidth / htmlWidth;
-        document.documentElement.style.fontSize = `${baseFontSize / scale}px`;
+
+      // // 动态设置根元素的字体大小
+      // function setRemUnit() {
+      //   const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      //   const baseWidth = 375; // 基准宽度（以 iPhone 6s 的宽度 375px 为例）
+      //   const baseFontSize = 16; // 基准字体大小
+      //   const scale = baseWidth / htmlWidth;
+      //   document.documentElement.style.fontSize = `${baseFontSize / scale}px`;
         
-        // 最小字体大小限制
-        const minFontSize = 12; // 最小字体大小
-        if (document.documentElement.style.fontSize < `${minFontSize}px`) {
-          document.documentElement.style.fontSize = `${minFontSize}px`;
-        }
-      }
+      //   // 最小字体大小限制
+      //   const minFontSize = 12; // 最小字体大小
+      //   if (document.documentElement.style.fontSize < `${minFontSize}px`) {
+      //     document.documentElement.style.fontSize = `${minFontSize}px`;
+      //   }
+      // }
 
-      // 页面加载时设置
-      window.addEventListener('load', setRemUnit);
+      // // 页面加载时设置
+      // window.addEventListener('load', setRemUnit);
 
-      // 窗口大小变化时重新设置
-      window.addEventListener('resize', setRemUnit);
+      // // 窗口大小变化时重新设置
+      // window.addEventListener('resize', setRemUnit);
 
     </script>
+
+    <!--End Footer area-->
+    <script src="/src/assets/js/jquery-2.2.4.min.js"></script>
+    <script src="/src/assets/js/bootstrap.min.js"></script>
+    <script src="/src/assets/js/nav.js"></script>
+    <!--waypoint js-->
+    <script src="/src/assets/js/waypoint/waypoints.min.js"></script>
+    <!--counter js-->
+    <script src="/src/assets/js/couterup/jquery.counterup.min.js"></script>
+    <script src="/src/assets/js/typedjs/typed.min.js"></script>
+    <script src="/src/assets/js/ripples/jquery.ripples-min.js"></script>
+    <script type="text/javascript" src="/src/assets/js/scrollIt.min.js"></script>
+    <script type="text/javascript" src="/src/assets/js/wow.js"></script>
+    <script src="/src/assets/js/custom.js"></script>
+    <!-- <script>
+      $(function() {
+        $.scrollIt();
+      });
+    </script>
+    <script>
+      new WOW().init();
+    </script> -->
   </body>
 </html>
