@@ -11,9 +11,9 @@
     <div class="pro-box">
       <section class="saas-landing">
         <div class="container">
-          <div class="row">
+          <div class="row" >
             <h2 class="title">搜索结果</h2>
-            <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item,idx) in proGroup" :key="idx">
+            <div class="col-md-3 col-sm-6 col-xs-12 pointer" v-for="(item,idx) in proGroup" :key="idx" @click="goDetail(item.num)">
               <div class="item-imag">
                 <div class="img-box">
                   <img :src="item.pic" class="img-responsive radius" alt="">
@@ -44,6 +44,7 @@
 
 <script setup>
   import { ref } from 'vue';
+  import { useRouter } from 'vue-router';
   import { Tag,Pagination  } from 'vant';
   import Top from '@/components/top.vue';
   import Filter from '@/components/filter.vue';
@@ -64,6 +65,13 @@
     {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:proPic,num:'A001'},
     {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:proPic,num:'A001'},
   ])
+
+  // 链接跳转
+  let router = useRouter();
+  let goDetail=(item)=>{
+    router.push('/detail?num='+item.num);
+  }
+  
 
   // 分页
   let currentPage = ref(1);

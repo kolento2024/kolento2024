@@ -27,7 +27,7 @@
       <div class="container">
         <div class="row">
           <h2 class="title">10元特价</h2>
-          <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item,idx) in specialGroup" :key="idx">
+          <div class="col-md-4 col-sm-6 col-xs-12 pointer" v-for="(item,idx) in specialGroup" :key="idx" @click="goDetail(item.num)">
             <a href="drimo/index.html" target="_blank">
               <div class="item-imag">
                 <div class="img-box">
@@ -54,7 +54,7 @@
       <div class="container">
         <div class="row">
           <h2 class="title">热卖爆款</h2>
-          <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item,idx) in hotGroup" :key="idx">
+          <div class="col-md-3 col-sm-6 col-xs-12 pointer" v-for="(item,idx) in hotGroup" :key="idx" @click="goDetail(item.num)">
             <div class="item-imag">
               <div class="img-box">
                 <img :src="item.pic" class="img-responsive radius" alt="">
@@ -80,7 +80,7 @@
       <div class="container">
         <div class="row">
           <h2 class="title">个人博客</h2>
-          <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item,idx) in blogGroup" :key="idx">
+          <div class="col-md-4 col-sm-6 col-xs-12 pointer" v-for="(item,idx) in blogGroup" :key="idx" @click="goDetail(item.num)">
             <a href="drimo/index.html" target="_blank">
               <div class="item-imag">
                 <div class="img-box">
@@ -108,7 +108,7 @@
       <div class="container">
         <div class="row">
           <h2 class="title">企业官网</h2>
-          <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item,idx) in webGroup" :key="idx">
+          <div class="col-md-3 col-sm-6 col-xs-12 pointer" v-for="(item,idx) in webGroup" :key="idx" @click="goDetail(item.num)">
             <div class="item-imag">
               <div class="img-box">
                 <img :src="item.pic" class="img-responsive radius" alt="">
@@ -136,7 +136,8 @@
 
 <script setup>
   import {ref} from 'vue';
-  import Top from '@/components/top.vue'
+  import {useRouter} from 'vue-router';
+  import Top from '@/components/top.vue';
 
   // 特价产品示图
   import specialPic1 from '@/assets/images/product/index-1.png';
@@ -179,6 +180,12 @@
     {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
     {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
   ])
+
+  // 链接跳转
+  let router = useRouter();
+  let goDetail=(item)=>{
+    router.push('/detail?num='+item.num);
+  }
 </script>
 
 <style scoped lang="scss">
