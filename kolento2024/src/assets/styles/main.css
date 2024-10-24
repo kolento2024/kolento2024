@@ -22,13 +22,10 @@ body {
 .ant-menu-horizontal {
   border-bottom:1px solid rgba(5, 5, 5, 0);
 }
-.ant-menu-light {
-  background: #df8888;
-}
 .ant-menu-item span {
-  color:#fff;
+  color:#333;
   svg {
-    color:#fff;
+    color:#333;
   }
 }
 
@@ -47,19 +44,16 @@ body {
 }
 
 .van-cell__title {font-weight: bold;}
-.van-search {
-  background: #df8888!important;
-}
 .mini {font-size: 0.8rem;}
 
 /* 折叠面板 */
 .van-collapse {
-  background: rgba(248,249,250,0.7);
+  background: #f7f7f7;
   .van-cell {
-    background: rgba(248,249,250,0.7)!important;
+    background: #f7f7f7!important;
   }
   .van-collapse-item__content {
-    background: rgba(248,249,250,0.7)!important;
+    background: #f7f7f7!important;
     padding:8px 16px!important;
   }
 }
@@ -68,8 +62,4 @@ body {
   /* border-bottom:1px solid #df8888!important; */
 }
 
-.van-collapse-item--border:after {
-  /* border-top:none!important; */
-  border-top:1px solid #df8888!important;
-}
 

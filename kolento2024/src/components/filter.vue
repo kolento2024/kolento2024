@@ -102,22 +102,22 @@
     flex-wrap: wrap;
     .tag-list {
       cursor: pointer;
-      color:#df8888;
+      color:#f8395d;
       border-radius:0.3rem;
       margin:0.2rem 0.5rem 0.2rem 0;
       padding:0.1rem 0.4rem 0.05rem;
-      border:1px solid #df8888;
+      border:1px solid #f8395d;
       transition:all ease 0.2s;
     }
     .tag-list:hover {
-      background: #df8888;
+      background: #f8395d;
       color:#fff;
-      border-color:#df8888;
+      border-color:#f8395d;
     }
     .list-on {
-      background: #df8888;
+      background: #f8395d;
       color:#fff;
-      border-color:#df8888;
+      border-color:#f8395d;
     }
   }
 </style>

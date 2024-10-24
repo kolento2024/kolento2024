@@ -9,7 +9,7 @@
       </svg>
     </div>
     <div class="menu-box pc">
-      <a-menu v-model:selectedKeys="current" mode="horizontal" :items="items" />
+      <a-menu v-model:selectedKeys="current" mode="horizontal" :items="items" @click="goPage"/>
     </div>
     <van-search v-model="keyWords" placeholder="请输入搜索关键词"  shape="round" background="#fff" />
 
@@ -20,6 +20,7 @@
 
 <script setup>
   import { Icon,Search,ActionSheet  } from 'vant';
+  import { useRoute,useRouter } from 'vue-router';
   import { h, ref } from 'vue';
   import { HomeOutlined,LikeOutlined,SmileOutlined,VideoCameraOutlined,MessageOutlined } from '@ant-design/icons-vue';
 
@@ -35,14 +36,8 @@
     {
       key: '2',
       icon: () => h(LikeOutlined),
-      label: '10元特价',
-      title: '10元特价',
-    },
-    {
-      key: '3',
-      icon: () => h(SmileOutlined),
-      label: '爆款热卖',
-      title: '爆款热卖',
+      label: '网页模版',
+      title: '网页模版',
     },
     {
       key: '4',
@@ -55,16 +50,6 @@
       icon: () => h(MessageOutlined),
       label: '常见问题',
       title: '常见问题',
-      // children: [
-      //   {
-      //     label: '如何使用',
-      //     key: 'use',
-      //   },
-      //   {
-      //     label: '进阶教程',
-      //     key: 'more',
-      //   },
-      // ],
     },
 
   ]);
@@ -79,8 +64,7 @@
   let show = ref(false);
   let menuGroup = ref([
     {name:'首页'},
-    {name:'10元特价'},
-    {name:'爆款热卖'},
+    {name:'网页模版'},
     {name:'使用教程'},
     {name:'常见问题'}
   ])
@@ -89,6 +73,21 @@
   }
   let onSelect=()=>{
     show.value=false;
+  }
+
+  // 菜单栏
+  let route =  useRouter();
+  let goPage=(item,key)=>{
+    console.log('item',item);
+    if(item.item.title=='首页'){
+      route.push('/');
+    }else if(item.item.title=='网页模版'){
+      route.push('/prolist');
+    }else if(item.item.title=='使用教程'){
+    
+    }else if(item.item.title=='其他问题'){
+
+    }
   }
 </script>
 
@@ -101,7 +100,7 @@
     padding:0 0.2rem 0 1rem;
     width: 100%;
     height: 3.5rem;
-    background: #df8888;
+    background: #fff;
     box-shadow:0 2px 8px rgba(0, 0, 0, 0.15);
     display:flex;
     align-items: center;
@@ -110,6 +109,7 @@
     .logo-box {
       display:flex;
       align-items: center;
+      width: 240px;
       svg {width: 1.4rem;}
       .logo-pic {width: 38px;height: 38px;margin-right: 6px;}
     }

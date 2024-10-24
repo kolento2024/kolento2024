@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Top/>
 
     <section class="hero-area-fix">
       <div class="hero-area" id="water">
@@ -35,8 +36,9 @@
                 <div class="product-title">
                   <p class="name">{{ item.name }}</p>
                   <div class="info">
-                    <p class="price"><b>价格：</b>{{ item.price }}元</p>
-                    <p class="page"><b>页数：</b>{{ item.page }}</p>
+                    <p class="price"><b>价格:</b>{{ item.price }}元</p>
+                    <p class="num"><b>编号:</b>{{ item.num }}</p>
+                    <p class="page"><b>页数:</b>{{ item.page }}</p>
                   </div>
                 </div>
 
@@ -44,6 +46,7 @@
             </a>
           </div>
         </div>
+        <p class="more more1">查看更多</p>
       </div>
     </section>
 
@@ -59,14 +62,71 @@
               <div class="product-title">
                 <p class="name">{{ item.name }}</p>
                 <div class="info">
-                  <p class="price"><b>价格：</b>{{ item.price }}元</p>
-                  <p class="page"><b>页数：</b>{{ item.page }}</p>
+                  <p class="price"><b>价格:</b>{{ item.price }}元</p>
+                  <p class="num"><b>编号:</b>{{ item.num }}</p>
+                  <p class="page"><b>页数:</b>{{ item.page }}</p>
                 </div>
               </div>
 
               </div>
           </div>
         </div>
+
+        <p class="more more2">查看更多</p>
+      </div>
+    </section>
+
+    <section class="product-landing pro_d" data-scroll-index="1">
+      <div class="container">
+        <div class="row">
+          <h2 class="title">个人博客</h2>
+          <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item,idx) in blogGroup" :key="idx">
+            <a href="drimo/index.html" target="_blank">
+              <div class="item-imag">
+                <div class="img-box">
+                  <img :src="item.pic" class="img-responsive radius" alt="">
+                </div>
+                <div class="product-title">
+                  <p class="name">{{ item.name }}</p>
+                  <div class="info">
+                    <p class="price"><b>价格:</b>{{ item.price }}元</p>
+                    <p class="num"><b>编号:</b>{{ item.num }}</p>
+                    <p class="page"><b>页数:</b>{{ item.page }}</p>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <p class="more more1">查看更多</p>
+      </div>
+    </section>
+
+    <section class="saas-landing">
+      <div class="container">
+        <div class="row">
+          <h2 class="title">企业官网</h2>
+          <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item,idx) in webGroup" :key="idx">
+            <div class="item-imag">
+              <div class="img-box">
+                <img :src="item.pic" class="img-responsive radius" alt="">
+              </div>
+              <div class="product-title">
+                <p class="name">{{ item.name }}</p>
+                <div class="info">
+                  <p class="price"><b>价格:</b>{{ item.price }}元</p>
+                  <p class="num"><b>编号:</b>{{ item.num }}</p>
+                  <p class="page"><b>页数:</b>{{ item.page }}</p>
+                </div>
+              </div>
+
+              </div>
+          </div>
+        </div>
+
+        <p class="more more2">查看更多</p>
       </div>
     </section>
 
@@ -76,26 +136,48 @@
 
 <script setup>
   import {ref} from 'vue';
+  import Top from '@/components/top.vue'
 
   // 特价产品示图
   import specialPic1 from '@/assets/images/product/index-1.png';
 
   // 特价数据
   let specialGroup = ref([
-    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
-    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
-    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
-    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
-    {id:5,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
-    {id:6,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1},
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A001'},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A002'},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A003'},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A004'},
+    {id:5,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A005'},
+    {id:6,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:specialPic1,num:'A006'},
   ])
 
+  // 热卖爆款
   import hotPic1 from '@/assets/images/product/blog-1.png';
   let hotGroup = ref([
-    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
-    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
-    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
-    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1},
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1,num:'A001'},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1,num:'A001'},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1,num:'A001'},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:hotPic1,num:'A001'},
+  ])
+
+  // 个人博客
+  import blogPic1 from '@/assets/images/product/index-1.png';
+  let blogGroup = ref([
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:blogPic1,num:'A001'},
+  ])
+
+  // 企业官网
+  import webPic1 from '@/assets/images/product/blog-1.png';
+  let webGroup = ref([
+    {id:1,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
+    {id:2,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
+    {id:3,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
+    {id:4,name:'静态页面模版',price:10,page:1,type:'special',tech:'div+css',pic:webPic1,num:'A001'},
   ])
 </script>
 
@@ -500,6 +582,34 @@
 
   .mocc {
       margin-top: 75px;
+  }
+
+  .more {
+    width: 180px;
+    margin: 20px auto 12px;
+    color: #323233;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 99px;
+    transition:all ease 0.3s;
+    text-align: center;
+    cursor: pointer;
+  }
+  .more1 {
+    background: #f7f8fa;
+  }
+  .more2 {
+    background: #fff;
+  }
+  .col-md-3 {
+    margin-bottom: 40px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .num {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 860px) {
