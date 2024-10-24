@@ -36,7 +36,7 @@
 <script setup>
   import {ref} from 'vue';
   import {Collapse, CollapseItem} from 'vant';
-  let active = ref(['1','2','3']);
+  let active = ref(['1','2','3','4']);
 
   // 主题
   let themeGroup = ref([

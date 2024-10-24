@@ -73,7 +73,7 @@
 
 <style scoped lang="scss">
   .filter-box {
-    padding: 100px 0 40px 0;
+    padding: 100px 20px 40px;
   }
 
   p {
@@ -135,7 +135,7 @@
   }
 
   .item-imag:hover .product-title {
-    background: #f8395d !important;
+    background: #df8888 !important;
     color: #fff;
     transition: .5s;
     border-radius: 0 0 4px 4px;
@@ -166,7 +166,7 @@
     position: absolute;
     top: -13px;
     right: 0;
-    background: #f8395d;
+    background: #df8888;
     width: 60px;
     height: 25px;
     border-radius: 40px;
