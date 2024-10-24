@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表</title>
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #444;
+    }
+
+    header input[type="search"] {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    header input[type="search"]:focus {
+      border-color: #ffde59;
+    }
+
+    .menu-btn {
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn:hover {
+      color: #ffde59;
+    }
+
+    /* Menu */
+    #menu {
+      background: #333;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    #menu.visible {
+      transform: translateY(0);
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #menu ul li {
+      margin: 5px 0;
+    }
+
+    #menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #menu ul li a:hover {
+      background: #444;
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .filter-group {
+      margin-bottom: 20px;
+      flex-basis: 20%;
+    }
+
+    .filter-group h3 {
+      margin-bottom: 5px;
+    }
+
+    .filter-group button {
+      padding: 5px 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .filter-group button:hover {
+      background: #444;
+      color: #fff;
+    }
+
+    /* Products */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 10px;
+      width: calc(33% - 40px); /* Adjust for spacing */
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card .price,
+    .product-card .pages,
+    .product-card .tech-stack,
+    .product-card .theme {
+      margin: 5px 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 40px); /* 在小屏幕上每行显示两个卡片 */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%; /* 在更小的屏幕上每行显示一个卡片 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="menu-btn">&#9776;</button>
+    <nav id="menu" class="hidden">
+      <ul>
+        <li><a href="#">10元特价</a></li>
+        <li><a href="#">热门爆款</a></li>
+        <li><a href="#">使用教程</a></li>
+        <li><a href="#">常见问题</a></li>
+      </ul>
+    </nav>
+    <input type="search" placeholder="搜索...">
+  </header>
+
+  <main>
+    <section class="filters">
+      <div class="filter-group">
+        <h3>主题</h3>
+        <button data-filter="all" class="active">全部</button>
+        <button data-filter="tech">科技</button>
+        <button data-filter="art">艺术</button>
+        <button data-filter="nature">自然</button>
+      </div>
+      <div class="filter-group">
+        <h3>技术栈</h3>
+        <button data-filter="html">HTML</button>
+        <button data-filter="css">CSS</button>
+        <button data-filter="js">JavaScript</button>
+      </div>
+      <div class="filter-group">
+        <h3>价格</h3>
+        <button data-filter="cheap">低价</button>
+        <button data-filter="medium">中价</button>
+        <button data-filter="expensive">高价</button>
+      </div>
+      <div class="filter-group">
+        <h3>页数</h3>
+        <button data-filter="short">短篇</button>
+        <button data-filter="medium-length">中篇</button>
+        <button data-filter="long">长篇</button>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product Image">
+        <h3>产品名称</h3>
+        <p class="price">价格: $20.00</p>
+        <p class="pages">页数: 100</p>
+        <p class="tech-stack">技术栈: HTML, CSS, JS</p>
+        <p class="theme">主题: 科技</p>
+      </div>
+      <!-- 更多产品卡片... -->
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.querySelector(".menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("visible");
+      });
+
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      filterButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          const filterValue = this.getAttribute("data-filter");
+          const productCards = document.querySelectorAll(".product-card");
+
+          productCards.forEach(card => {
+            card.classList.remove("active");
+            if (filterValue === "all") {
+              card.style.display = "block";
+              card.classList.add("active");
+            } else {
+              if (card.classList.contains(filterValue)) {
+                card.style.display = "block";
+                card.classList.add("active");
+              } else {
+                card.style.display = "none";
+                card.classList.remove("active");
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

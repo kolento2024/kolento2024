@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海贼王专题网站</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .navigation {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navigation li {
+      margin: 0 10px;
+    }
+
+    .navigation a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      color: #ffde59;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .animation-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .animation-intro img {
+      width: 50%;
+      height: auto;
+    }
+
+    .text {
+      width: 50%;
+      text-align: center;
+    }
+
+    .character-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .character-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .character-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .character-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .character-card .card-info {
+      padding: 15px;
+    }
+
+    .character-card .card-title {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .character-card .card-meta {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .comic-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .comic-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .comic-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .comic-item .item-info {
+      padding: 15px;
+    }
+
+    .comic-item .item-title {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#animation">动画介绍</a></li>
+        <li><a href="#characters">人物介绍</a></li>
+        <li><a href="#comics">漫画介绍</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="animation">
+      <h2>动画介绍</h2>
+      <div class="animation-intro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5jU6KvL5VZuY1yMxWlO2lPmKUz5Qo4F12nA&usqp=CAU" alt="海贼王动画封面">
+        <div class="text">
+          <p>《海贼王》是一部由尾田荣一郎创作的日本漫画，后来改编成动画。故事讲述了年轻的海盗蒙奇·D·路飞，他带领着一群伙伴，寻找传说中的宝藏“ONE PIECE”，并成为海贼王。</p>
+        </div>
+      </div>
+    </section>
+    <section id="characters">
+      <h2>人物介绍</h2>
+      <div class="character-cards">
+        <!-- 动态生成的人物卡片 -->
+      </div>
+    </section>
+    <section id="comics">
+      <h2>漫画介绍</h2>
+      <div class="comic-grid">
+        <!-- 动态生成的漫画信息 -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 海贼王专题网站. 版权所有.</p>
+  </footer>
+  <script>
+    // 人物介绍数据
+    const charactersData = [
+      {
+        name: "蒙奇·D·路飞",
+        image: "https://i.pinimg.com/736x/17/5c/8d/175c8d7119f3668759c5f4f9a361d30f.jpg",
+        description: "草帽海贼团船长，橡胶果实能力者，梦想是成为海贼王。",
+      },
+      {
+        name: "罗罗诺亚·索隆",
+        image: "https://i.pinimg.com/736x/8f/4d/20/8f4d20b31176f5f62a41c1c2036d0c7f.jpg",
+        description: "草帽海贼团战斗员，梦想成为世界最强剑士。",
+      },
+      {
+        name: "娜美",
+        image: "https://i.pinimg.com/736x/8b/6e/fb/8b6efb00f55a0b10690a1b1082d71a18.jpg",
+        description: "草帽海贼团航海士，擅长绘制航海图，梦想是绘制一张世界地图。",
+      },
+      {
+        name: "乌索普",
+        image: "https://i.pinimg.com/736x/58/0a/6d/580a6db0a61a42c8709a96090109051b.jpg",
+        description: "草帽海贼团狙击手，梦想是成为勇敢的海上战士。",
+      },
+      {
+        name: "山治",
+        image: "https://i.pinimg.com/736x/08/1e/67/081e6712b11f8075c5c100c33250802a.jpg",
+        description: "草帽海贼团厨师，梦想是找到传说中的海域All Blue。",
+      },
+      {
+        name: "托尼托尼·乔巴",
+        image: "https://i.pinimg.com/736x/1a/6a/30/1a6a301150d1c80c17b33c06377a11d7.jpg",
+        description: "草帽海贼团船医，人人果实能力者，梦想是成为万能医生。",
+      },
+      {
+        name: "妮可·罗宾",
+        image: "https://i.pinimg.com/736x/17/65/55/1765555619b1f51d232c830533b86574.jpg",
+        description: "草帽海贼团考古学家，花花果实能力者，梦想是解开历史之谜。",
+      },
+      {
+        name: "弗兰奇",
+        image: "https://i.pinimg.com/736x/74/97/9a/74979a4006f8a42b99d49a66b49d302d.jpg",
+        description: "草帽海贼团船匠，梦想是建造一艘环游世界的船。",
+      },
+      {
+        name: "布鲁克",
+        image: "https://i.pinimg.com/736x/27/4e/9b/274e9b629f8a07d1a8d3d93b6d40b355.jpg",
+        description: "草帽海贼团音乐家，黄泉果实能力者，梦想是与拉布再次相见。",
+      },
+      {
+        name: "甚平",
+        image: "https://i.pinimg.com/736x/5f/5d/14/5f5d1466c25d50d9b427c2d5b425b160.jpg",
+        description: "草帽海贼团舵手，鲸鱼鱼人，梦想是保护大海。",
+      }
+    ];
+
+    // 漫画介绍数据
+    const comicsData = [
+      {
+        title: "第1卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "草帽小子路飞的冒险开始。",
+      },
+      {
+        title: "第2卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第3卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第4卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第5卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第6卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第7卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第8卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第9卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      },
+      {
+        title: "第10卷",
+        image: "https://i.ebayimg.com/images/g/0wAAAOSwH~RfZq1t/s-l300.jpg",
+        description: "路飞与伙伴们在橘子镇的冒险。",
+      }
+    ];
+
+    // 动态生成人物卡片
+    function renderCharacterCards(container) {
+      container.innerHTML = '';
+      charactersData.forEach(character => {
+        const card = document.createElement('div');
+        card.className = 'character-card';
+        card.innerHTML = `
+          <img src="${character.image}" alt="${character.name}">
+          <div class="card-info">
+            <h3 class="card-title">${character.name}</h3>
+            <p class="card-meta">${character.description}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // 动态生成漫画信息
+    function renderComics(container) {
+      container.innerHTML = '';
+      comicsData.forEach(comic => {
+        const item = document.createElement('div');
+        item.className = 'comic-item';
+        item.innerHTML = `
+          <img src="${comic.image}" alt="${comic.title}">
+          <div class="item-info">
+            <h3 class="item-title">${comic.title}</h3>
+            <p class="item-meta">${comic.description}</p>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    window.onload = function() {
+      const charactersContainer = document.querySelector('.character-cards');
+      const comicsContainer = document.querySelector('.comic-grid');
+      
+      renderCharacterCards(charactersContainer);
+      renderComics(comicsContainer);
+    };
+  </script>
+</body>
+</html>
